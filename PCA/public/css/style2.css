@@ -1,0 +1,319 @@
+
+    .example {
+        position: relative;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .example div, .example p, .example span{
+        padding: 0;
+        margin: 0;
+    }
+
+    #mygraphiccontainer {
+        width: 650px;
+        height: 400px;
+    }
+
+    .example #demo {
+        position: absolute;
+        left: 92px;
+        top: 103px;
+        background-color: #f00;
+        text-align: center;
+        line-height: 1.5em;
+        border: solid 1px #cc0000;
+        border-radius: 0;
+        -moz-box-shadow: 3px 3px 7px rgba(0,0,0,0.4);
+        -webkit-box-shadow: 3px 3px 7px rgba(0,0,0,0.4);
+        width: 20px;
+        height: 20px;
+    }
+
+    .dot {
+        position: absolute;
+        color: #396491;
+        font-size: 12px;
+        font-weight: bold;
+        height: 0;
+        line-height: 12px;
+        opacity: 0.9;
+        width: 0;
+        cursor: move;
+        left: -23px;
+        top: -23px;
+    }
+
+    .dot .point {
+        background-color: #000;
+        position: absolute;
+        left: -3px;
+        top: -3px;
+        width: 3px;
+        height: 3px;
+        border-radius: 3px;
+        font-size: 0px;
+        opacity: 0.4;
+    }
+
+    .number-label {
+        position: absolute;
+        top: -1.5em;
+        left: -7.7em;
+        width: 7em;
+        height: 45px;
+        line-height: 1em;
+    }
+
+    /* Gives the points a larger target area to drag */
+    .dot .fat-finger {
+        position: absolute;
+        top: -25px; /* minus half the fat-finger height */
+        left: -100px;
+        width: 100px;
+        height: 60px;
+        -moz-border-radius: 6px;
+        -webkit-border-radius: 6px;
+        border-radius: 3px;
+        background-color: #abc;
+        opacity: 0.3;
+        filter: alpha (opacity = 30);
+    }
+
+    .dot .fat-finger2 {
+        position: absolute;
+        top: -25px; /* minus half the fat-finger height */
+        left: -100px;
+        width: 100px;
+        height: 60px;
+        -moz-border-radius: 6px;
+        -webkit-border-radius: 6px;
+        border-radius: 3px;
+        background-color: #abc;
+        opacity: 0.3;
+        filter: alpha (opacity = 30);
+    }
+
+    #dot-4 .fat-finger {
+        background-color: #8DAA16;
+        opacity: 0.4;
+    }
+
+    #dot-5 .fat-finger {
+        background-color: #f80;
+        opacity: 0.4;
+    }
+
+    #dot-6 .fat-finger {
+        background-color: #f80;
+        opacity: 0.4;
+    }
+
+    #dot-7 .fat-finger {
+        background-color: #f80;
+        opacity: 0.4;
+    }
+
+    #dot-8 .fat-finger {
+        background-color: #8DAA16;
+        opacity: 0.4;
+    }
+
+    #dot-13 .fat-finger {
+        background-color: #f80;
+        opacity: 0.4;
+    }
+
+    #dot-14 .fat-finger {
+        background-color: #f80;
+        opacity: 0.4;
+    }
+
+    #dot-15 .fat-finger {
+        background-color: #8DAA16;
+        opacity: 0.4;
+    }
+
+    #dot-16 .fat-finger {
+        background-color: #8DAA16;
+        opacity: 0.4;
+    }
+
+    #dot-17 .fat-finger {
+        background-color: #8DAA16;
+        opacity: 0.4;
+    }
+
+    #dot-18 .fat-finger {
+        background-color: #8DAA16;
+        opacity: 0.4;
+    }
+
+    #dot-19 .fat-finger {
+        background-color: #8DAA16;
+        opacity: 0.4;
+    }
+
+    #dot-20 .fat-finger {
+        background-color: #8DAA16;
+        opacity: 0.4;
+    }
+
+    #dot-21 .fat-finger {
+        background-color: #8DAA16;
+        opacity: 0.4;
+    }
+
+    #dot-22 .fat-finger {
+        background-color: #8DEE16;
+        opacity: 0.4;
+    }
+
+    #dot-0 .fat-finger {
+        background-color: #8DAA16;
+        opacity: 0.4;
+    }
+
+    #dot-0, #demo {
+        top: 120px;
+        left: 120px;
+    }
+
+    #dot-1 {
+        top: 70px;
+        left: 447px;
+    }
+
+    #dot-2 {
+        top: 120px;
+        left: 747px;
+    }
+
+    #dot-3 {
+        top: 170px;
+        left: 447px;
+    }
+
+    #dot-4 {
+        top: 320px;
+        left: 120px;
+    }
+
+    #dot-5 {
+        top: 250px;
+        left: 447px;
+    }
+
+    #dot-6 {
+        top: 320px;
+        left: 447px;
+    }
+
+    #dot-7 {
+        top: 390px;
+        left: 447px;
+    }
+
+    #dot-8 {
+        top: 550px;
+        left: 120px;
+    }
+
+    #dot-9 {
+        top: 480px;
+        left: 447px;
+    }
+
+    #dot-10 {
+        top: 550px;
+        left: 447px;
+    }
+
+    #dot-11 {
+        top: 620px;
+        left: 447px;
+    }
+
+    #dot-12 {
+        top: 730px;
+        left: 120px;
+    }
+
+    #dot-13 {
+        top: 700px;
+        left: 447px;
+    }
+
+    #dot-14 {
+        top: 770px;
+        left: 447px;
+    }
+
+    #dot-15 {
+        top: 1000px;
+        left: 120px;
+    }
+
+    #dot-16 {
+        top: 860px;
+        left: 447px;
+    }
+
+    #dot-17 {
+        top: 920px;
+        left: 447px;
+    }
+
+    #dot-18 {
+        top: 980px;
+        left: 447px;
+    }
+
+    #dot-19 {
+        top: 1040px;
+        left: 447px;
+    }
+
+    #dot-20 {
+        top: 1100px;
+        left: 447px;
+    }
+
+    #dot-21 {
+        top: 980px;
+        left: 700px;
+    }
+
+    #dot-22 {
+        top: 380px;
+        left: 1100px;
+    }
+
+    #info {
+        position: absolute;
+        width: 450px;
+        height: 15em;
+        right: 1em;
+        top: 1em;
+    }
+
+    code span {
+        color: #CC3300;
+    }
+
+    .point {
+        font-size: 24px;
+        left: 5px;
+        position: absolute;
+        top: -5px;
+    }
+
+    .cuadrado {
+    width: 50px;
+    height: 50px;
+    /*border: solid 5px lightblue;*/
+    position: relative;
+    top: -20px;
+    left: -20px;
+  }

@@ -1,0 +1,76 @@
+body{     
+    background-image: url('../images/cork-wallet.png');
+    margin: 2px;
+}
+
+ul.ui-autocomplete{
+  z-index:1100;
+}
+
+.titulo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFFFFF;
+    font-family: Georgia, "Times New Roman", Times, serif
+}
+
+@media (max-width: 767px) {
+  .hidden-xsn {
+    font-weight: normal;
+    font-size: 10px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    /*display: none !important;*/
+  }
+  .hidden-xsn2 {
+    font-weight: normal;
+    font-size: 8px;
+    /*display: none !important;*/
+  }
+}
+
+.tituloC {
+    color: #FFFFFF;
+    font-weight: bold;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11px
+}
+
+.stripes {
+    background-color: #2B3643;
+    background-image: linear-gradient(transparent 50%, #2B629C 50%);
+    background-size: 50px 50px;
+}
+
+#round-border {
+    border-radius: 40px 10px;
+    display: block;
+    /*width: 100%;*/
+    /*height: 100px;*/
+    border: 1px solid #2B3643;
+}
+
+/*.fcytbg{
+    background: #2B4C70;
+}*/
+
+.fcytbg > thead > tr > th,
+.fcytbg > tbody > tr > th,
+.fcytbg > tfoot > tr > th,
+.fcytbg > thead > tr > td,
+.fcytbg > tbody > tr > td,
+.fcytbg > tfoot > tr > td {
+  /*padding: 8px;*/
+  background: #2B4C70;
+  /*line-height: 1.42857143;*/
+  /*vertical-align: top;*/
+  /*border-top: 1px solid #ddd;*/
+}
+
+.fondoFCYT {
+    background: linear-gradient(180deg, red 25%, #2B3643 25%, #2B3643 50%, red 50%, red 75%, #2B629C 75%);
+    background-size: 98px 98.9px;
+}
+
+.hide-from-rss {
+    display: none;
+}
