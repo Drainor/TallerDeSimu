@@ -1,0 +1,53 @@
+/* trigger button */
+#download_now {
+  background:transparent url(images/orange-arrow.gif) no-repeat scroll 0 0;
+  display:block;
+  height:44px;
+  margin: 0 auto;
+  margin-bottom:30px;
+  /*overflow:hidden;*/
+  text-indent:-999em;
+  width:159px;
+  cursor:pointer;
+}
+
+
+
+  /* tooltip styling */
+  .tooltip3 {
+    background-color:#fff;
+    border:1px solid #fff;
+    padding:10px 15px;
+    width:200px;
+    display:none;
+    color:#000;
+    text-align:left;
+    font-size:12px;
+    background:#05345b url("images/h300.png") repeat-x;width:170px;-moz-border-radius:5px;-webkit-border-radius:5px
+    /* outline radius for mozilla/firefox only */
+    -moz-box-shadow:0 0 10px #000;
+    -webkit-box-shadow:0 0 10px #000;
+}
+.tooltip3 h3 {
+
+    margin-top: 0;
+    color: #ffc;
+
+}
+#content .toolti3 p{font-size:11px}
+.tooltip3 h3{margin-top:0;color:#ffc}
+.tooltip3 a{color:#ff0;text-decoration:none}
+.tooltip3 a:hover{color:#ff0 !important;text-decoration:underline}
+
+ 
+  /* a .label element inside tooltip */
+  .tooltip3 .value {
+    color:#ad4;
+    width:35px;
+  }
+ 
+  .tooltip3 a {
+    color:#ad4;
+    font-size:11px;
+    font-weight:bold;
+  }

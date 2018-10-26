@@ -1,0 +1,198 @@
+nav.navbar {
+   /* background-color: #C8D5B9 ;*/
+}
+
+nav.navbar ul.nav li {
+   /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+}
+
+#opcion_user{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.nav.navbar-nav.navbar-right {
+    color: blue;
+}
+
+/*.nav.navbar-nav.navbar-right li a span{
+    color: red;
+}*/
+
+.navbar-default .navbar-brand {
+    /*color: #d6dbdf;*/
+}
+
+ul.ui-autocomplete{
+	z-index:1100;
+}
+/* jssor slider bullet navigator skin 05 css */
+        /*
+        .jssorb05 div           (normal)
+        .jssorb05 div:hover     (normal mouseover)
+        .jssorb05 .av           (active)
+        .jssorb05 .av:hover     (active mouseover)
+        .jssorb05 .dn           (mousedown)
+        */
+        .jssorb05 {
+            position: absolute;
+        }
+        .jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
+            position: absolute;
+            /* size of bullet elment */
+            width: 50px;
+            height: 100px;
+            background: url('../images/b05.png') no-repeat;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .jssorb05 div { background-position: -7px -7px; }
+        .jssorb05 div:hover, .jssorb05 .av:hover { background-position: -37px -7px; }
+        .jssorb05 .av { background-position: -67px -7px; }
+        .jssorb05 .dn, .jssorb05 .dn:hover { background-position: -97px -7px; }
+
+        /* jssor slider arrow navigator skin 22 css */
+        /*
+        .jssora22l                  (normal)
+        .jssora22r                  (normal)
+        .jssora22l:hover            (normal mouseover)
+        .jssora22r:hover            (normal mouseover)
+        .jssora22l.jssora22ldn      (mousedown)
+        .jssora22r.jssora22rdn      (mousedown)
+        .jssora22l.jssora22lds      (disabled)
+        .jssora22r.jssora22rds      (disabled)
+        */
+        .jssora22l, .jssora22r {
+            display: block;
+            position: absolute;
+            /* size of arrow element */
+            width: 100px;
+            height: 58px;
+            cursor: pointer;
+            background: url('../images/a22.png') center center no-repeat;
+            overflow: hidden;
+        }
+        .jssora22l { background-position: -10px -31px; }
+        .jssora22r { background-position: -70px -31px; }
+        .jssora22l:hover { background-position: -130px -31px; }
+        .jssora22r:hover { background-position: -190px -31px; }
+        .jssora22l.jssora22ldn { background-position: -250px -31px; }
+        .jssora22r.jssora22rdn { background-position: -310px -31px; }
+        .jssora22l.jssora22lds { background-position: -10px -31px; opacity: .3; pointer-events: none; }
+        .jssora22r.jssora22rds { background-position: -70px -31px; opacity: .3; pointer-events: none; }
+
+
+.vertical-menu a{
+	width: 110px;
+	text-align: center;
+}
+.vertical-menu a {
+	background-color: #eee;
+	color:  #a93226 ;
+	display: block;
+	padding: 10px;
+	text-decoration: none; 
+}
+.vertical-menu a:hover{
+	background-color: #ccc;
+}
+/*.vertical-menu a.active{
+	background-color: #4CAF50;
+	/*color: white;
+}*/
+
+
+
+#btn_1 button{
+	/*background-color: #4CAF50;*/
+	border: none;
+	/*color: white;*/
+	padding: 6px 6px;
+	cursor: pointer;
+	/*width: 50%;*/
+	display: inline-block;
+	font-size: 12px;
+	border-radius: 0;
+}
+/*
+#btn_1 button:not(:last-child){
+	border-bottom: none;
+}
+#btn_1 button:hover{
+	background-color: #3e8e41;
+}
+*/
+.info {
+	background-color: #2196F3;
+	color:  #a93226 ;
+	width: 52px;
+}
+.info:hover {
+	background-color: #0b7dda;
+}
+
+.default {
+	background-color: #e7e7e7;
+	width: 52px;
+	color: #2196F3;
+}
+.default:hover {
+	background-color: #ddd;
+}
+
+#btn_fecha{
+	background-color: #e7e7e7;
+	border: none;
+	color: #a93226;
+	/*color: white;*/
+	padding: 8px 10px;
+	/*cursor: pointer;*/
+	/*width: 50%;*/
+	display: inline-block;
+	font-size: 18px;
+	border-radius: 0;
+	width: 20px;
+}
+
+
+
+
+#menu_btn button{
+	background-color: #4CAF50;
+	/*border: 1px solid green;*/
+	color: white;
+	padding: 5px 30px;
+	cursor: pointer;
+	width: 100%;
+	display: block;
+}
+#menu_btnp button:not(:last-child){
+	border-bottom: none;
+}
+#menu_btn button:hover{
+	background-color: #3e8e41;
+}
+
+#modal_req{
+	width: 50% !important;
+}
+
+.popover-title {
+    background-color: #A93226;  /*#922B21; */
+    color: #FFFFFF; 
+    font-size: 18px;
+    text-align:center;
+}
+.popover-content {
+      background-color: #616A6B;
+      color: #FFFFFF;
+      padding: 15px;
+  }
+
+  /***estilos de ventana modal  #34495E  **/
+
+  .modal-header {
+      /*background-color: #A93226;*/
+      /*color:white !important;*/
+      /*text-align: center;*/
+      /*font-size: 30px;*/
+  }
