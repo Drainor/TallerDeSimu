@@ -1,8 +1,10 @@
 <table cellspacing="0" cellpadding="0" border="0" width="100%">
   <tr>
     <td width="20" height="22" valign="top" bgcolor="#336699" background="images/fondotit.png"><img src="images/esquinaiz.gif" width="20" height="22"></td>
-    <td height="22" width="100%" valign="top" bgcolor="#336699" background="images/fondotit.png" class="tituloC hidden-xsn2"><font size="1">Universidad
-    Mayor de San Sim&oacute;n</font></td>
+    <td height="22" width="100%" valign="top" bgcolor="#336699" background="images/fondotit.png" class="tituloC hidden-xsn2"><font size="1">
+      <h3 style="color:white">
+        Universidad Mayor de San Sim&oacute;n
+      </h3></font></td>
     <td width="20" height="22" valign="top" bgcolor="#336699" background="images/fondotit.png" align="right"><img src="images/esquinader.gif" width="20" height="22"></td>
   </tr>
 </table>
@@ -19,7 +21,10 @@
         </tr>
       </table>
     </td>
-    <td class="titulo hidden-xsn" rowspan="2" background="images/fondotit.png" align="center" valign="middle" width="312">Sistema de Proceso Contencioso Administrativo 
+    <td class="titulo hidden-xsn" rowspan="2" background="images/fondotit.png" align="center" valign="middle" width="312">
+        <h1 style="color:white">
+          Sistema de Proceso Contencioso Administrativo
+        </h1>
     </td>
     <td background="images/fondotit.png" height="37" valign="top" align="center" class="titulo hidden-xs" width="300"></td>
   </tr>
