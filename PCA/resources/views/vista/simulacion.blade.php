@@ -252,7 +252,7 @@
         <div class="fat-finger color5">Entrada
             <span><img src="images/customers.png" alt=""></span>
             <div class="dot-0"></div>
-            <img src="images/graphics-walking-900519.gif" class="cuadrado" alt="man">
+            <img src="images/graphics-walking-900519.gif" class="cuadrado" alt="man" id="cuadrado">
         </div>
         </td>
         <td>
