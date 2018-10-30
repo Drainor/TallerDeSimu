@@ -8,10 +8,10 @@ $(".cuadrado").click(function(){
 })
 
 function demandar(demandante){
-  var tiempo = 8000;
+  var tiempo = 7000;
 
-  setTimeout(function(){ presentacion(demandante) }, 0);
-  setTimeout(function(){ notificacion(demandante) }, tiempo);
+  setTimeout(function(){ proceso1(demandante) }, 0);
+  setTimeout(function(){ proceso2(demandante) }, tiempo*1);
   setTimeout(function(){  proceso3(demandante)}, tiempo*2);
   setTimeout(function(){  proceso4(demandante)}, tiempo*3);
   setTimeout(function(){  proceso5(demandante)}, tiempo*4);
@@ -19,12 +19,14 @@ function demandar(demandante){
   setTimeout(function(){  proceso7(demandante)}, tiempo*6);
   setTimeout(function(){  proceso8(demandante)}, tiempo*7);
   setTimeout(function(){  proceso9(demandante)}, tiempo*8);
-  setTimeout(function(){  salida(demandante)}, tiempo*9);
+  setTimeout(function(){  proceso10(demandante)}, tiempo*9);
+  setTimeout(function(){  proceso11(demandante)}, tiempo*10);
+  setTimeout(function(){  salida(demandante)}, tiempo*11);
 }
 
 function mover(demandante,x,y,pros){
-    demandante.animate({left:""+ x+"px",top:""+y+"px"},8000);
-    setTimeout(function(){ subProcesos(pros); }, 8000);
+    demandante.animate({left:""+ x+"px",top:""+y+"px"},6000);
+    setTimeout(function(){ subProcesos(pros); }, 7000);
 
     
 }
@@ -43,70 +45,76 @@ function sobrePoner(div,dem){
         });
 }
 
-function presentacion(demandante){
+function proceso1(demandante){
     var proceso = $('.dot-1');
     sobrePoner(proceso,demandante);
-    mover(demandante,-600,-250,1);
+    mover(demandante,-45,150,1);
 }
 
-function notificacion(demandante){
+function proceso2(demandante){
   var proceso = $('.dot-2');
   sobrePoner(proceso,demandante);
-  mover(demandante,-350,-250,2);
+  mover(demandante,190,150,2);
 }
 
 function proceso3(demandante){
   var proceso = $('.dot-3');
   sobrePoner(proceso,demandante);
-  mover(demandante,-450,-150,3);
+  mover(demandante,75,230,3);
 }
 
 function proceso4(demandante){
   var proceso = $('.dot-4');
   sobrePoner(proceso,demandante);
-  mover(demandante,-600,0,4);
+  mover(demandante,-45,390,4);
 }
 
 function proceso5(demandante){
   var proceso = $('.dot-5');
   sobrePoner(proceso,demandante);
-  mover(demandante,-300,0,5);
+  mover(demandante,190,390,5);
 }
 
 function proceso6(demandante){
   var proceso = $('.dot-6');
   sobrePoner(proceso,demandante);
-  mover(demandante,-450,80,6);
+  mover(demandante,75,470,6);
 }
 
 function proceso7(demandante){
   var proceso = $('.dot-7');
   sobrePoner(proceso,demandante);
-  mover(demandante,0,-250,7);
+  mover(demandante,554,0,7);
 }
 
 function proceso8(demandante){
   var proceso = $('.dot-8');
   sobrePoner(proceso,demandante);
-  mover(demandante,255,-250,8);
+  mover(demandante,775,0,8);
 }
 
 function proceso9(demandante){
   var proceso = $('.dot-9');
   sobrePoner(proceso,demandante);
-  mover(demandante,90,-150,9);
+  mover(demandante,665,80,9);
 }
 
-function proceso9(demandante){
-  var proceso = $('.dot-9');
+function proceso10(demandante){
+  var proceso = $('.dot-10');
   sobrePoner(proceso,demandante);
-  mover(demandante,90,-150,9);
+  mover(demandante,554,230,10);
+}
+
+function proceso11(demandante){
+  var proceso = $('.dot-11');
+  sobrePoner(proceso,demandante);
+  mover(demandante,665,230,11);
 }
 
 function salida(demandante){
   var proceso = $('.dot-20');
   sobrePoner(proceso,demandante);
-  mover(demandante,265,0,15);
+  mover(demandante,1200,460,15);
 }
 
 
