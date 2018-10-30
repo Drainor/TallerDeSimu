@@ -1,15 +1,32 @@
 <div class="col-sm-5">
 
+  <div class="fondo">
+    <table>
+      <tr>
+        <th colspan="1">Inicio del Proceso</th>
+      </tr>
+      <tr>
+        <td>
+        <div class="fat-finger color5">Entrada
+            <span><img src="images/customers.png" alt=""></span>
+            <div class="dot-0"></div>
+            <img src="images/skinner.gif" class="cuadrado" alt="man">
+        </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
 <div class="fondo">
     <table>
       <tr>
-        <th colspan="3">Procedimiento</th>
+        <th colspan="3">Demanda</th>
       </tr>
       <tr>
-        <td><div class="fat-finger color1 smallipop" id="proceso1">Diligencias Preparatorias
+        <td><div class="fat-finger color1 smallipop" id="proceso1">Admision de la Demanda
             <div class="dot-1"></div>
             <!-- <span class="smallipop" id="proceso1"> -->
-              <div class="smallipop-hint">
+              <!-- <div class="smallipop-hint">
                 <img src="images/animated-judge-image-0041-tiny.gif" alt="Flying screens"
                    style="float:left; margin:0 15px 20px 0" />
                 <h3>Subprocesos</h3>
@@ -32,14 +49,14 @@
                   </tr>
                 </table>
                 <a href="release-notes">Continúa el proceso...</a>
-              </div>
+              </div> -->
             <!-- </span> -->
         </div>
         </td>
         <td></td>
-        <td><div class="fat-finger color1 smallipop" id="proceso2">Conciliacion Previa
+        <td><div class="fat-finger color1 smallipop" id="proceso2">Revision de la Demanda
             <div class="dot-2"></div>
-            <div class="smallipop-hint">
+            <!-- <div class="smallipop-hint">
               <img src="images/animated-judge-image-0041-tiny.gif" alt="Flying screens"
                  style="float:left; margin:0 15px 20px 0" />
               <h3>Subprocesos</h3>
@@ -62,14 +79,14 @@
                 </tr>
               </table>
               <a href="release-notes">Continúa el proceso...</a>
-            </div>
+            </div> -->
         </div></td>
       </tr>
       <tr>
         <td></td>
-        <td><div class="fat-finger color1 smallipop" id="proceso3">Exencion de Costas y Costos
+        <td><div class="fat-finger color1 smallipop" id="proceso3">Utilizacion de Recursos Disponibles
             <div class="dot-3"></div>
-            <div class="smallipop-hint">
+            <!-- <div class="smallipop-hint">
               <img src="images/animated-judge-image-0041-tiny.gif" alt="Flying screens"
                  style="float:left; margin:0 15px 20px 0" />
               <h3>Subprocesos</h3>
@@ -92,7 +109,7 @@
                 </tr>
               </table>
               <a href="release-notes">Resolución apelable en el efecto devolutivo...</a>
-            </div>
+            </div> -->
         </div></td>
         <td></td>
       </tr>
@@ -101,12 +118,12 @@
 <div class="fondo">
     <table>
       <tr>
-        <th colspan="3">Procesos Incidentales </th>
+        <th colspan="3">Tramites de la Via Ordinaria </th>
       </tr>
       <tr>
-        <td><div class="fat-finger color2 smallipop" id="proceso4">Especializados Acum. de Procesos
+        <td><div class="fat-finger color2 smallipop" id="proceso4">Presentacion de Pruebas
             <div class="dot-4"></div>
-                <div class="smallipop-hint">
+                <!-- <div class="smallipop-hint">
               <img src="images/animated-judge-image-0041-tiny.gif" alt="Flying screens"
                  style="float:left; margin:0 15px 20px 0" />
               <h3>Subprocesos</h3>
@@ -133,14 +150,14 @@
                 </tr>
               </table>
               <a href="release-notes">   FIN</a>
-            </div>
+            </div> -->
             </div>
         </div>
         </td>
         <td></td>
-        <td><div class="fat-finger color2 smallipop" id="proceso5">Excusa y Recusacion
+        <td><div class="fat-finger color2 smallipop" id="proceso5">Aprobacion de los Tramites
             <div class="dot-5"></div>
-            <div class="smallipop-hint">
+            <!-- <div class="smallipop-hint">
               <img src="images/animated-judge-image-0041-tiny.gif" alt="Flying screens"
                  style="float:left; margin:0 15px 20px 0" />
               <h3>Subprocesos</h3>
@@ -159,15 +176,15 @@
                 </tr>
               </table>
               <a href="release-notes">Continúa el trámite...</a>
-            </div>
+            </div> -->
             
         </div></td>
       </tr>
       <tr>
         <td></td>
-        <td><div class="fat-finger color2 smallipop" id="proceso6">Especializados Rendicion de ctas. y tercerias
+        <td><div class="fat-finger color2 smallipop" id="proceso6">Utilizacion de Recursos Disponibles
             <div class="dot-6"></div>
-            <div class="smallipop-hint">
+            <!-- <div class="smallipop-hint">
               <img src="images/animated-judge-image-0041-tiny.gif" alt="Flying screens"
                  style="float:left; margin:0 15px 20px 0" />
               <h3>Subprocesos</h3>
@@ -186,23 +203,24 @@
                 </tr>
               </table>
               <a href="release-notes">Continúa el proceso...</a>
-            </div>
+            </div> -->
         </div></td>
         <td></td>
       </tr>
     </table>
 </div>
 </div>
+
 <div class="col-sm-5">
 <div class="fondo">
     <table>
       <tr>
-        <th colspan="3">Procesos Conocimiento </th>
+        <th colspan="3">Audiencia</th>
       </tr>
       <tr>
-        <td><div class="fat-finger color3 smallipop" id="proceso7">P.C. Oral Fase Escrita
+        <td><div class="fat-finger color3 smallipop" id="proceso7">Alegacion por ambas partes
             <div class="dot-7"></div>
-            <div class="smallipop-hint">
+            <!-- <div class="smallipop-hint">
               <img src="images/animated-judge-image-0041-tiny.gif" alt="Flying screens"
                  style="float:left; margin:0 15px 20px 0" />
               <h3>Subprocesos</h3>
@@ -225,39 +243,91 @@
                 </tr>
               </table>
               <a href="release-notes">   FIN</a>
-            </div>
+            </div> -->
         </div>
         </td>
         <td></td>
-        <td><div class="fat-finger color3">P.C. Audiencia Preliminar
+        <td><div class="fat-finger color3">Juez dicta Resolucion
             <div class="dot-8"></div>
         </div></td>
       </tr>
       <tr>
         <td></td>
-        <td><div class="fat-finger color3">P.C. Audiencia Complementaria
+        <td><div class="fat-finger color3">Utilizacion de Recursos Disponibles
             <div class="dot-9"></div>
         </div></td>
         <td></td>
       </tr>
     </table>
 </div>
+
 <div class="fondo">
     <table>
       <tr>
-        <th colspan="1">Entrada/Salida </th>
+        <th colspan="3">Sentencia </th>
+      </tr>
+      <tr>
+        <td><div class="fat-finger color3">Emision de la Sentencia
+            <div class="dot-10"></div>
+        </div>
+        </td>
+        <td></td>
+        <td><div class="fat-finger color3">Cumplimiento de la Resolucion
+            <div class="dot-11"></div>
+        </div></td>
+      </tr>
+    </table>
+</div>
+</div>
+
+<div class="col-sm-2">
+<div class="fondo2">
+    <table>
+      <tr>
+        <th colspan="3">Recursos Disponibles </th>
+      </tr>
+      <tr>
+        <td><div class="fat-finger color4">Recursos para Demanda
+            <div class="dot-12"></div>
+        </div>
+        </td>
+        </tr>
+      <tr>
+        <td>
+        <div class="fat-finger color4">Recursos para Tramite
+            <div class="dot-13"></div>
+        </div>
+        </td>
+        </tr>
+      <tr>
+        <td>
+        <div class="fat-finger color4">Recurso para Audiencia
+            <div class="dot-14"></div>
+        </div>
+        </td>
       </tr>
       <tr>
         <td>
-        <div class="fat-finger color5">Entrada
-            <span><img src="images/customers.png" alt=""></span>
-            <div class="dot-0"></div>
-            <img src="images/graphics-walking-900519.gif" class="cuadrado" alt="man" id="cuadrado">
+        <div class="fat-finger color4">Recurso para Sentencia
+            <div class="dot-15"></div></div></td>
+        </tr>
+      <!-- <tr>
+        <td>
+        <div class="fat-finger color4">Recurso Sentencia
+            <div class="dot-16"></div>
         </div>
         </td>
-        <td>
-            <div class="fat-finger"></div>
-        </td>
+      </tr> -->
+    </table>
+    <!-- <button type="button" title="Editar" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#ingresarParametrosModal" onclick="ingresarParam()"><span class="fa fa-pencil-square-o"></span></button>-->
+</div>
+
+  <div class="fondo">
+    <table>
+      <tr>
+        <th colspan="1">Fin del Proceso </th>
+      </tr>
+      <tr>
         <td>
         <div class="fat-finger color5">Salida
             <span><img src="images/door_out.png" alt=""></span>
@@ -266,65 +336,7 @@
         </td>
       </tr>
     </table>
-</div>
-<div class="fondo">
-    <table>
-      <tr>
-        <th colspan="3">Proceso </th>
-      </tr>
-      <tr>
-        <td><div class="fat-finger color3">Proceso Extraordinario
-            <div class="dot-10"></div>
-        </div>
-        </td>
-        <td></td>
-        <td><div class="fat-finger color3">Proceso Estructura Monitoria
-            <div class="dot-11"></div>
-        </div></td>
-      </tr>
-    </table>
-</div>
-</div>
-<div class="col-sm-2">
-<div class="fondo2">
-    <table>
-      <tr>
-        <th colspan="3">Recurso </th>
-      </tr>
-      <tr>
-        <td><div class="fat-finger color4">Recurso Reposicion
-            <div class="dot-12"></div>
-        </div>
-        </td>
-        </tr>
-      <tr>
-        <td>
-        <div class="fat-finger color4">Recurso Apelacion
-            <div class="dot-13"></div>
-        </div>
-        </td>
-        </tr>
-      <tr>
-        <td>
-        <div class="fat-finger color4">Recurso Casacion
-            <div class="dot-14"></div>
-        </div>
-        </td>
-      </tr>
-      <tr>
-        <td>
-        <div class="fat-finger color4">Recurso Compulsa
-            <div class="dot-15"></div></div></td>
-        </tr>
-      <tr>
-        <td>
-        <div class="fat-finger color4">Recurso Sentencia
-            <div class="dot-16"></div>
-        </div>
-        </td>
-      </tr>
-    </table>
-    <!-- <button type="button" title="Editar" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#ingresarParametrosModal" onclick="ingresarParam()"><span class="fa fa-pencil-square-o"></span></button> -->
-</div>
+  </div>
+
 </div>
 
