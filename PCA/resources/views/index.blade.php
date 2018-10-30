@@ -49,7 +49,7 @@
       @include('vista.parametros')   
     </div>
 <!-- <script src="js/jquery-3.1.1.min.js"></script> -->
-<script src={{asset("js/jquery-1.11.1.min.js")}}></script>
+<script src={{asset("js/jquery.min.js")}}></script>
 <script src={{asset("js/jquery-ui.min.js")}}></script>
 <script src={{asset("js/bootstrap.min.js")}} type="text/javascript" charset="utf-8"></script>
 
