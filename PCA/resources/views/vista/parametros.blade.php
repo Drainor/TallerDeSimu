@@ -9,15 +9,15 @@
       </h4>
       <!-- Form -->
       <div>
-        Promedio de solicitudes por Hora:
+        Promedio Promedio de Proceso Demanda (Dias):
       </div>
       <input class="form-control" id="lambda" type="text" value="0.1"/>
       <div>
-        Tiempo Promedio de Sercicio por Procedimiento (Minutos):
+        Tiempo Promedio de Proceso Tramite (dias):
       </div>
       <input class="form-control" id="mu" type="text" value="30"/>
       <div>
-        Tiempo de simulación:
+        Tiempo Promedio de Proceso Audiencia:
       </div>
       <input class="form-control" id="time" type="text" value="480"/>
       <div>
