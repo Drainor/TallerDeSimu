@@ -287,7 +287,7 @@
         <th colspan="3">Recursos Disponibles </th>
       </tr>
       <tr>
-        <td><div class="fat-finger color4">Recursos para Demanda
+        <td><div class="fat-finger color4">Recursos Judiciales de Reposición
             <div class="dot-12"></div>
         </div>
         </td>
