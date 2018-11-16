@@ -2,7 +2,6 @@
 $(".cuadrado").click(function(){
   //alert('dasdasd');
   var demandante = $(this);
-  var random = Math.round(Math.random()*99+1);
   demandar(demandante);
   //realizarMovimiento(demandante,700,0);
 })

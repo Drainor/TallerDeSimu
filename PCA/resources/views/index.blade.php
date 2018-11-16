@@ -50,12 +50,14 @@
     </div>
 <!-- <script src="js/jquery-3.1.1.min.js"></script> -->
 <script src={{asset("js/jquery.min.js")}}></script>
+<script src={{asset("js/jquery.min.js")}}></script>
 <script src={{asset("js/jquery-ui.min.js")}}></script>
 <script src={{asset("js/bootstrap.min.js")}} type="text/javascript" charset="utf-8"></script>
 
 <!-- <script src="jquery.connectingLine.js"></script> -->
 <script src={{asset("js/jquery.smallipop.min.js")}}></script>
-<script src={{asset("controlador/control_simulacion.js")}} type="text/javascript" charset="utf-8"></script>
+<script src={{asset("controlador/generadorMixto.js")}} ></script>
+<script src={{asset("controlador/control_simulacion.js")}} ></script>
 <script type="text/javascript" src={{asset("js/interface.js")}}></script>
 <script type="text/javascript" src={{asset("js/Random.js")}}></script>
 <script type="text/javascript" src={{asset("js/Queue.js")}}></script>
