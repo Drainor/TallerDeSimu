@@ -1,4 +1,5 @@
-
+<button class="prueba">prueba</button>
+<button class="refrescar">refrescar</button>
 <div class="col-sm-5">
 
   <div class="fondo">
@@ -24,93 +25,80 @@
         <th colspan="3">Demanda</th>
       </tr>
       <tr>
-        <td><div class="fat-finger color1 smallipop" id="proceso1">Admisión de la Demanda
+        <td><div class="fat-finger color1 smallipop" id="proceso1">Presentacion de la Demanda
             <div class="dot-1"></div>
-            <!-- <span class="smallipop" id="proceso1"> -->
-              <!-- <div class="smallipop-hint">
+             <span class="smallipop" id="proceso1"> 
+               <div class="smallipop-hint">
                 <img src="images/animated-judge-image-0041-tiny.gif" alt="Flying screens"
                    style="float:left; margin:0 15px 20px 0" />
                 <h3>Subprocesos</h3>
                 <table style="margin:0">
-                  <tr>
-                    <td class="label">Admisión  <span class="fa fa-check"></span></td>
-                    <td class="value"></td>
-                  </tr>
-                  <tr>
-                    <td class="label">Citación  <span class="fa fa-check"></span></td>
-                    <td class="value"></td>
-                  </tr>
-                  <tr>
-                    <td class="label">Audiencia  <span class="fa fa-check"></span></td>
-                    <td class="value"></td>
-                  </tr>
-                  <tr>
-                    <td class="label">Oposición  <span class="fa fa-check"></span></td>
+                  <tr style="display: none;" class="precentacion">
+                    <td class="label">Se presenta la demanda deacuerdo a lo que señala el Art.110 CPC  <span class="fa fa-check"></span></td>
                     <td class="value"></td>
                   </tr>
                 </table>
                 <a href="release-notes">Continúa el proceso...</a>
-              </div> -->
-            <!-- </span> -->
+              </div> 
         </div>
         </td>
         <td></td>
-        <td><div class="fat-finger color1 smallipop" id="proceso2">Revisión de la Demanda
+        <td><div class="fat-finger color1" id="proceso2">Revisión de la Demanda
             <div class="dot-2"></div>
-            <!-- <div class="smallipop-hint">
+             <div class="smallipop-hint">
               <img src="images/animated-judge-image-0041-tiny.gif" alt="Flying screens"
                  style="float:left; margin:0 15px 20px 0" />
               <h3>Subprocesos</h3>
               <table style="margin:0">
-                <tr>
-                  <td class="label">El promotor de la conciliación fija sus pretensiones  <span class="fa fa-check"></span></td>
+                <tr style="display: none;" class="aceptarDemanda">
+                  <td class="label">Se acepta la Demanda  <span class="fa fa-check"></span></td>
                   <td class="value"></td>
                 </tr>
-                <tr>
-                  <td class="label">El conciliador propone alternativas de solución  <span class="fa fa-check"></span></td>
+                <tr style="display: none;" id="subsanacionD">
+                  <td class="label">Se rechaza la Demanda  <span class="fa fa-check"></span></td>
                   <td class="value"></td>
                 </tr>
-                <tr>
-                  <td class="label">Se llega a una Solución Parcial   <span class="fa fa-check"></span></td>
+                <tr style="display: none;" class="subsanacionD">
+                  <td class="label">Se realiza la subsanacion de la Demanda <span class="fa fa-check"></span></td>
                   <td class="value"></td>
                 </tr>
-                <tr>
-                  <td class="label">Se concluye la audiencia. Una parte sigue tramitando  <span class="fa fa-check"></span></td>
+                <tr style="display: none;" class="subsancionD">
+                  <td class="label">Plazo de subsanacion 3 dias  <span class="fa fa-check"></span></td>
+                  <td class="value"></td>
+                </tr>
+                <tr style="display: none;" class="aceptarSubD">
+                  <td class="label">Se acepta la demanda  <span class="fa fa-check"></span></td>
+                  <td class="value"></td>
+                </tr>
+                <tr style="display: none;" class="finSubsanacionD">
+                  <td class="label">No se puede subsana la Demanda <span class="fa fa-check"></span></td>
+                  <td class="value"></td>
+                </tr>
+                <tr style="display: none;" class="finSubsancionD">
+                  <td class="label">La demanda se es rechazada <span class="fa fa-check"></span></td>
                   <td class="value"></td>
                 </tr>
               </table>
               <a href="release-notes">Continúa el proceso...</a>
-            </div> -->
+            </div>
         </div></td>
       </tr>
       <tr>
         <td></td>
-        <td><div class="fat-finger color1 smallipop" id="proceso3">Utilización de Recursos Disponibles
+        <td><div class="fat-finger color1 smallipop" id="proceso3">Notificacion al Demandado
             <div class="dot-3"></div>
-            <!-- <div class="smallipop-hint">
+            <div class="smallipop-hint">
               <img src="images/animated-judge-image-0041-tiny.gif" alt="Flying screens"
                  style="float:left; margin:0 15px 20px 0" />
               <h3>Subprocesos</h3>
               <table style="margin:0">
-                <tr>
-                  <td class="label">Solicitud antes de la demanda  <span class="fa fa-check"></span></td>
-                  <td class="value"></td>
-                </tr>
-                <tr>
-                  <td class="label">Resolución  <span class="fa fa-check"></span></td>
-                  <td class="value"></td>
-                </tr>
-                <tr>
-                  <td class="label">Excención Total o Parcial   <span class="fa fa-check"></span></td>
-                  <td class="value"></td>
-                </tr>
-                <tr>
-                  <td class="label">Se concluye la audiencia. Una parte sigue tramitando  <span class="fa fa-check"></span></td>
+                <tr style="display: none;" class="notificar">
+                  <td class="label">Notificar al Demandado  <span class="fa fa-check"></span></td>
                   <td class="value"></td>
                 </tr>
               </table>
-              <a href="release-notes">Resolución apelable en el efecto devolutivo...</a>
-            </div> -->
+              <a href="release-notes">Continual proceso...</a>
+            </div> 
         </div></td>
         <td></td>
       </tr>
@@ -213,7 +201,7 @@
 </div>
 
 <div class="col-sm-5">
-<div class="fondo">
+  <div class="fondo">
     <table>
       <tr>
         <th colspan="3">Audiencia</th>
@@ -262,6 +250,7 @@
     </table>
 </div>
 
+
 <div class="fondo">
     <table>
       <tr>
@@ -278,7 +267,7 @@
         </div></td>
       </tr>
     </table>
-</div>
+  </div>
 </div>
 
 <div class="col-sm-2">
