@@ -1,33 +1,63 @@
-
-$(".cuadrado").click(function(){
-  //alert('dasdasd');
-  var demandante = $(this);
-  demandar(demandante);
-  //realizarMovimiento(demandante,700,0);
-})
-
-function demandar(demandante){
-  var tiempo = 7000;
-
-  setTimeout(function(){ proceso1(demandante) }, 0);
-  setTimeout(function(){ proceso2(demandante) }, tiempo*1);
-  setTimeout(function(){  proceso3(demandante)}, tiempo*2);
-  setTimeout(function(){  proceso4(demandante)}, tiempo*3);
-  setTimeout(function(){  proceso5(demandante)}, tiempo*4);
-  setTimeout(function(){  proceso6(demandante)}, tiempo*5);
-  setTimeout(function(){  proceso7(demandante)}, tiempo*6);
-  setTimeout(function(){  proceso8(demandante)}, tiempo*7);
-  setTimeout(function(){  proceso9(demandante)}, tiempo*8);
-  setTimeout(function(){  proceso10(demandante)}, tiempo*9);
-  setTimeout(function(){  proceso11(demandante)}, tiempo*10);
-  setTimeout(function(){  salida(demandante)}, tiempo*11);
+var tiempo = 7000;
+var aux = 0;
+var simularProceso = function(procesos){
+   reiniciar();
+   for (let i = 0; i < procesos.length; i++) {
+    console.log(procesos[i].subProceso);
+    realizarMovimiento(procesos[i].proceso,procesos[i].subProceso);
+    aux=aux+1;
+   }
 }
 
-function mover(demandante,x,y,pros){
-    demandante.animate({left:""+ x+"px",top:""+y+"px"},6000);
-    setTimeout(function(){ subProcesos(pros); }, 7000);
+function realizarMovimiento(mov,subP){
+  
+    switch (mov) {
+      case 1:setTimeout(function(){mover(-45,150,1,subP);}, tiempo*aux);
+        break;
+      case 2:setTimeout(function(){mover(190,150,2,subP);}, tiempo*aux);
+        break;
+      case 3:setTimeout(function(){mover(75,230,3,subP);}, tiempo*aux);
+        break;
+      case 4:setTimeout(function(){mover(-45,390,4,subP);}, tiempo*aux);
+        break;
+      case 5:setTimeout(function(){mover(190,390,5,subP);}, tiempo*aux);
+        break;
+      case 6:setTimeout(function(){mover(75,470,6,subP);}, tiempo*aux);
+        break;
+      case 7:setTimeout(function(){mover(554,0,7,subP);}, tiempo*aux);
+        break;
+      case 8:setTimeout(function(){mover(775,0,8,subP);}, tiempo*aux);
+        break;
+      case 9:setTimeout(function(){mover(665,80,9,subP);}, tiempo*aux);
+        break;
+      case 10:setTimeout(function(){mover(554,230,10,subP);}, tiempo*aux);
+        break;
+      case 11:setTimeout(function(){mover(665,230,11,subP);}, tiempo*aux);
+        break;
+      case 12:setTimeout(function(){mover(665,230,12,subP);}, tiempo*aux);
+        break;
+      case 13:setTimeout(function(){mover(665,230,13,subP);}, tiempo*aux);
+        break;
+      case 14:setTimeout(function(){mover(665,230,14,subP);}, tiempo*aux);
+        break;
+      case 0:setTimeout(function(){mover(1200,460,20,subP);}, tiempo*aux);
+        break;
+    }
+}
 
-    
+
+
+function mover(x,y,pros,subP){
+  var proceso = $('.dot-'+pros);
+  var demandante = $('.cuadrado');
+  sobrePoner(proceso,demandante);
+  $('.cuadrado').animate({left:""+ x+"px",top:""+y+"px"},6000);
+  setTimeout(function(){ subProcesos(pros,subP); }, 7000);
+}
+
+function reiniciar() {
+  $('.cuadrado').animate({left:""+ 0+"px",top:""+0+"px"},500);
+  aux = 0;
 }
 
 function sobrePoner(div,dem){
@@ -44,87 +74,27 @@ function sobrePoner(div,dem){
         });
 }
 
-function proceso1(demandante){
-    var proceso = $('.dot-1');
-    sobrePoner(proceso,demandante);
-    mover(demandante,-45,150,1);
+
+function subProcesos(pros,subP){
+    console.log(aux);
+    //$("#proceso"+pros).removeClass("smallipop-initialized");
+    $("#proceso"+pros).smallipop({theme: 'black'}, contenido(subP));
+    $("#proceso"+pros).smallipop('update', contenido(subP));
+
+  if(pros != 0){
+  $("#proceso"+pros).mouseover();
+  }
+    //setInterval(spop, 5000),1000;*/
 }
 
-function proceso2(demandante){
-  var proceso = $('.dot-2');
-  sobrePoner(proceso,demandante);
-  mover(demandante,190,150,2);
+function contenido(subP){
+   return     "<div class='col-sm-12'>"+
+                "<img src='images/animated-judge-image-0041-tiny.gif' alt='Flying screens' style='float:left; margin:0 15px 20px 0' />"+
+                "<h3>Subprocesos</h3><br><br>"+
+                "<div>"+
+                "<b>"+ subP +"</b><br>"+
+                "</div>"+
+                "<a href='release-notes'>Continúa el proceso...</a>"+
+              "</div>"
 }
 
-function proceso3(demandante){
-  var proceso = $('.dot-3');
-  sobrePoner(proceso,demandante);
-  mover(demandante,75,230,3);
-}
-
-function proceso4(demandante){
-  var proceso = $('.dot-4');
-  sobrePoner(proceso,demandante);
-  mover(demandante,-45,390,4);
-}
-
-function proceso5(demandante){
-  var proceso = $('.dot-5');
-  sobrePoner(proceso,demandante);
-  mover(demandante,190,390,5);
-}
-
-function proceso6(demandante){
-  var proceso = $('.dot-6');
-  sobrePoner(proceso,demandante);
-  mover(demandante,75,470,6);
-}
-
-function proceso7(demandante){
-  var proceso = $('.dot-7');
-  sobrePoner(proceso,demandante);
-  mover(demandante,554,0,7);
-}
-
-function proceso8(demandante){
-  var proceso = $('.dot-8');
-  sobrePoner(proceso,demandante);
-  mover(demandante,775,0,8);
-}
-
-function proceso9(demandante){
-  var proceso = $('.dot-9');
-  sobrePoner(proceso,demandante);
-  mover(demandante,665,80,9);
-}
-
-function proceso10(demandante){
-  var proceso = $('.dot-10');
-  sobrePoner(proceso,demandante);
-  mover(demandante,554,230,10);
-}
-
-function proceso11(demandante){
-  var proceso = $('.dot-11');
-  sobrePoner(proceso,demandante);
-  mover(demandante,665,230,11);
-}
-
-function salida(demandante){
-  var proceso = $('.dot-20');
-  sobrePoner(proceso,demandante);
-  mover(demandante,1200,460,15);
-}
-
-
-function subProcesos(pros){
-  console.log(pros)
-  
-    
-              if(pros != 0){
-                $("#proceso"+pros).mouseover();
-              
-                
-    }
-    //setInterval(spop, 5000),1000;
-}
