@@ -30,15 +30,15 @@ function realizarMovimiento(mov,subP,recurso){
         break;
       case 10:setTimeout(function(){mover(554,230,10,subP,recurso);}, tiempo*aux);
         break;
-      case 11:setTimeout(function(){mover(665,230,11,subP,recurso);}, tiempo*aux);
+      case 11:setTimeout(function(){mover(775,230,11,subP,recurso);}, tiempo*aux);
         break;
-      case 12:setTimeout(function(){mover(665,230,12,subP,recurso);}, tiempo*aux);
+      case 12:setTimeout(function(){mover(665,310,12,subP,recurso);}, tiempo*aux);
         break;
-      case 13:setTimeout(function(){mover(665,230,13,subP,recurso);}, tiempo*aux);
+      case 13:setTimeout(function(){mover(554,460,13,subP,recurso);}, tiempo*aux);
         break;
-      case 14:setTimeout(function(){mover(665,230,14,subP,recurso);}, tiempo*aux);
+      case 14:setTimeout(function(){mover(665,460,14,subP,recurso);}, tiempo*aux);
         break;
-      case 0:setTimeout(function(){mover(1200,460,20,subP,recurso);}, tiempo*aux);
+      case 0:setTimeout(function(){mover(1200,550,20,subP,recurso);}, tiempo*aux);
         break;
     }
 }

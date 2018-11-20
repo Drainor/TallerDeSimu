@@ -1,4 +1,4 @@
-<button class="prueba">prueba</button>
+
 <div class="col-sm-5">
 
   <div class="fondo">
@@ -122,12 +122,12 @@
         <th colspan="3">Sentencia </th>
       </tr>
       <tr>
-        <td><div class="fat-finger color3">Emisión de la Sentencia
+        <td><div class="fat-finger color3" id="proceso13">Emisión de la Sentencia
             <div class="dot-10"></div>
         </div>
         </td>
         <td></td>
-        <td><div class="fat-finger color3">Cumplimiento de la Resolución
+        <td><div class="fat-finger color3"id="proceso14">Cumplimiento de la Resolución
             <div class="dot-11"></div>
         </div></td>
       </tr>

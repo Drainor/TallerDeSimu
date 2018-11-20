@@ -1,6 +1,9 @@
 var procesoDemanda;//ARREGLO DE PROCESOS QUE MADARE AL COMTROL_SIMULACION
-$('.prueba').click(function() {
+$('#simularAnimacion').click(function() {
+   
     demanda(true);
+
+  
 })
 
 function demanda(simular){
@@ -42,7 +45,6 @@ function demanda(simular){
     
     if(notificar){
         contestacion(tiempo,simular);
-        console.log(tiempo);
     }
 }
 
