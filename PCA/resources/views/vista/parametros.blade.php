@@ -33,10 +33,13 @@
           <option value="uniforme">Uniforme</option>-->
       </select>
       <div class="form-group">
-      <div class="btn btn-block btn-primary" id="simulate" onclick="simulate()">
+      <div class="btn btn-block btn-primary" id="simulate">
         Simular
       </div>
       </div>
+      <a class="btn btn-block btn-success" id="simularAnimacion">
+          Simular Animacion
+      </a>
       <!-- <div class="btn btn-block btn-info" data-toggle="modal" href="#myModal" role="button">
         About
       </div> -->

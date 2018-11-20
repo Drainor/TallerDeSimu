@@ -3,60 +3,62 @@ var aux = 0;
 var simularProceso = function(procesos){
    reiniciar();
    for (let i = 0; i < procesos.length; i++) {
-    console.log(procesos[i].subProceso);
-    realizarMovimiento(procesos[i].proceso,procesos[i].subProceso);
+    realizarMovimiento(procesos[i].proceso,procesos[i].subProceso,procesos[i].recurso);
     aux=aux+1;
    }
 }
 
-function realizarMovimiento(mov,subP){
-  
+function realizarMovimiento(mov,subP,recurso){
     switch (mov) {
-      case 1:setTimeout(function(){mover(-45,150,1,subP);}, tiempo*aux);
+      case 1:setTimeout(function(){mover(-45,150,1,subP,recurso);}, tiempo*aux);
         break;
-      case 2:setTimeout(function(){mover(190,150,2,subP);}, tiempo*aux);
+      case 2:setTimeout(function(){mover(190,150,2,subP,recurso);}, tiempo*aux);
         break;
-      case 3:setTimeout(function(){mover(75,230,3,subP);}, tiempo*aux);
+      case 3:setTimeout(function(){mover(75,230,3,subP,recurso);}, tiempo*aux);
         break;
-      case 4:setTimeout(function(){mover(-45,390,4,subP);}, tiempo*aux);
+      case 4:setTimeout(function(){mover(-45,390,4,subP,recurso);}, tiempo*aux);
         break;
-      case 5:setTimeout(function(){mover(190,390,5,subP);}, tiempo*aux);
+      case 5:setTimeout(function(){mover(190,390,5,subP,recurso);}, tiempo*aux);
         break;
-      case 6:setTimeout(function(){mover(75,470,6,subP);}, tiempo*aux);
+      case 6:setTimeout(function(){mover(75,470,6,subP,recurso);}, tiempo*aux);
         break;
-      case 7:setTimeout(function(){mover(554,0,7,subP);}, tiempo*aux);
+      case 7:setTimeout(function(){mover(554,0,7,subP,recurso);}, tiempo*aux);
         break;
-      case 8:setTimeout(function(){mover(775,0,8,subP);}, tiempo*aux);
+      case 8:setTimeout(function(){mover(775,0,8,subP,recurso);}, tiempo*aux);
         break;
-      case 9:setTimeout(function(){mover(665,80,9,subP);}, tiempo*aux);
+      case 9:setTimeout(function(){mover(665,80,9,subP,recurso);}, tiempo*aux);
         break;
-      case 10:setTimeout(function(){mover(554,230,10,subP);}, tiempo*aux);
+      case 10:setTimeout(function(){mover(554,230,10,subP,recurso);}, tiempo*aux);
         break;
-      case 11:setTimeout(function(){mover(665,230,11,subP);}, tiempo*aux);
+      case 11:setTimeout(function(){mover(775,230,11,subP,recurso);}, tiempo*aux);
         break;
-      case 12:setTimeout(function(){mover(665,230,12,subP);}, tiempo*aux);
+      case 12:setTimeout(function(){mover(665,310,12,subP,recurso);}, tiempo*aux);
         break;
-      case 13:setTimeout(function(){mover(665,230,13,subP);}, tiempo*aux);
+      case 13:setTimeout(function(){mover(554,460,13,subP,recurso);}, tiempo*aux);
         break;
-      case 14:setTimeout(function(){mover(665,230,14,subP);}, tiempo*aux);
+      case 14:setTimeout(function(){mover(665,460,14,subP,recurso);}, tiempo*aux);
         break;
-      case 0:setTimeout(function(){mover(1200,460,20,subP);}, tiempo*aux);
+      case 0:setTimeout(function(){mover(1200,550,20,subP,recurso);}, tiempo*aux);
         break;
     }
 }
 
 
 
-function mover(x,y,pros,subP){
+function mover(x,y,pros,subP,recurso){
   var proceso = $('.dot-'+pros);
   var demandante = $('.cuadrado');
   sobrePoner(proceso,demandante);
   $('.cuadrado').animate({left:""+ x+"px",top:""+y+"px"},6000);
-  setTimeout(function(){ subProcesos(pros,subP); }, 7000);
+  setTimeout(function(){ subProcesos(pros,subP,recurso); }, 7000);
 }
 
 function reiniciar() {
   $('.cuadrado').animate({left:""+ 0+"px",top:""+0+"px"},500);
+  for (let i = 1; i <= 4; i++) {
+    $("#recurso"+i).css('background', '#bea');
+    
+  }
   aux = 0;
 }
 
@@ -75,12 +77,15 @@ function sobrePoner(div,dem){
 }
 
 
-function subProcesos(pros,subP){
-    console.log(aux);
+function subProcesos(pros,subP,recurso){
+    reiniciarRecursos();
     //$("#proceso"+pros).removeClass("smallipop-initialized");
     $("#proceso"+pros).smallipop({theme: 'black'}, contenido(subP));
     $("#proceso"+pros).smallipop('update', contenido(subP));
 
+    if(recurso){
+      $("#recurso"+recurso).css('background', 'red');
+    }
   if(pros != 0){
   $("#proceso"+pros).mouseover();
   }
@@ -98,3 +103,9 @@ function contenido(subP){
               "</div>"
 }
 
+function reiniciarRecursos(){
+  for (let i = 1; i <= 4; i++) {
+    $("#recurso"+i).css('background', '#bea');
+    
+  }
+}
