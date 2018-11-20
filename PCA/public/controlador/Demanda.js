@@ -99,9 +99,42 @@ function contestacion(tiempo,simular){
 }
 
 function tramites(tiempo,simular){
-    diasTotal = 0;
+    var diasTotal = 0;
+    var subProc = "";
+    var recurso = generadorMixto(3)+1;
     dias = generadorMixto(10);
-    cumple = generadorMixto(2);
+    diasTotal +=dias;
+    subProc = "Presentacion de pruebas y requisitos en un plazo maximo de 10 dias<br>";
+    subProc += "Se realizo la presentacion en "+dias+"dias<br>";
+    agregarProceso(7,subProc);
+    cumplenR = generadorMixto(2);
+    if(cumplenR < 1){
+        subProc += "Se aceptan los requisitos";
+        agregarProceso(9,subProc,recurso);
+        dias = generadorMixto(8);
+        diasTotal += dias;
+        subProc = "Se realiza la Aprobacion y revicion de los tramites en un plazo maximo de 8 dias<br>";
+        subProc += "Se conclulle con la aprobacion y revicion en "+dias+"dias<br>";
+        aprobado = generadorMixto(2);
+        if (aprobado < 1) {
+            subProc += "Se aprobaron todos los tramites<br>";
+            agregarProceso(8,subProc);
+            tiempo.push({'tiempoTramite':diasTotal});
+            audiencia(tiempo,simular);
+        }else{
+            subProc += "Se rechazan los tramites<br>";
+            subProc += "El Juez dicta Auto o reconcidera revicion";
+            agregarProceso(8,subProc);
+            tiempo.push({'tiempoTramite':diasTotal});
+            audiencia(tiempo,simular);
+            //faltaa no entiendo
+        }
+    }else{
+        subProc += "Se rechazan los requisitos";
+        subProc += "El Juez dicta Auto para sentencia";
+        agregarProceso(8,subProc);
+        sentencia(tiempo,simular);
+    }
     agregarProceso(7,"")
     if(cumple < 2){
         
@@ -111,12 +144,24 @@ function tramites(tiempo,simular){
 function audiencia(tiempo,simular){
     var diasTotal = 0;
     var subProc = "";
+    subProc = "Audiencia Preliminar<br>";
+    subProc += "Se presentan Excepciones previas";
+    agregarProceso(10,subProc);
+    subProc = "Se resive reclamos de terceros<br>"
+    subProc += "Se realiza la validacion del Proceso<br>";
     var verificar = generadorMixto(2);
     if (verificar < 1){
-        subProc = "Se verifica si se convalida el proceso para continuar";
+        subProc += "Se rechaza la validacion del proceso";
+        dias = generadorMixto(3);
+        diasTotal += dias;
+        subProc += "Se procede a realizar el saneamiento del Proceso en un plazo de 3 dias";
+        subProc += "Se completa el saneamiento en un plazo de "+dias+"dia(s)";
+        subProc += "Se acepta el Proceso<br>";
+        agregarProceso(11,subProc);
+
     }else{
-        diasTotal = generadorMixto(30);
-        subProc = "Se realiza saneamento al proceso en un plazo de "+diasTotal+"dias para continuar con la audiencia";
+        subProc += "Se acepta el Proceso<br>";
+       agregarProceso(11,subProc);
         
     }
     dia = generadorMixto(30);
@@ -149,7 +194,7 @@ function audiencia(tiempo,simular){
             sentencia(tiempo,simular);
         }else{
             subProcesos(11,subProc);
-            subProc = "Las partes se pronuncian y exponen los alegatos al jues para dal solucion a estos<br>"; 
+            subProc = "Las partes se pronuncian y exponen los alegatos<br>"; 
             subProc += "Una ves solucionado los alegatos se procede a dictar centencia<br>"; 
             subProcesos(12,subProc);
             sentencia(tiempo,simular);
@@ -163,7 +208,7 @@ function sentencia(tiempo,simular){
      var diasTotal = 0;
      var dias = generadorMixto(40);
      diasTotal += dias;
-     subProc = "Pasado "+dias+"dias el Jues procede a dictar la sentencia<br>";
+     subProc = "Pasado "+dias+"dias el Juez procede a dictar la sentencia<br>";
      subProc += "->Tipos de sentencia: <br>";
      subProc += "->Suspencion de competencia <br>";
      subProc += "->Sancion de costos y multas <br>"
