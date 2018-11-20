@@ -96,7 +96,7 @@ function contenido(subP){
    return     "<div class='col-sm-12'>"+
                 "<img src='images/animated-judge-image-0041-tiny.gif' alt='Flying screens' style='float:left; margin:0 15px 20px 0' />"+
                 "<h3>Subprocesos</h3><br><br>"+
-                "<div>"+
+                "<div style='font-size: 12px;'>"+
                 "<b>"+ subP +"</b><br>"+
                 "</div>"+
                 "<a href='release-notes'>Continúa el proceso...</a>"+
