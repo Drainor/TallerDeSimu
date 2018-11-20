@@ -25,9 +25,9 @@ function addResultTable(lambda, mu, personsServed, analyticMeanPersonsOnSystem, 
 
     result+="<tr><td>&lambda;</td><td>"+lambda+"</td></tr>";
     result+="<tr><td>&mu;</td><td>"+mu+"</td></tr>";
-    result+="<tr><td>Total de casos atendidos</td><td>"+personsServed+"</td></tr>";
-    result+="<tr><td>Promedio de personas en la  fila </td><td>"+analyticMeanPersonsOnSystem+"</td></tr>";
-    result+="<tr><td>Promedio de personas en la  fila (Simulado)</td><td>"+meanPersonsOnSystem+"</td></tr>";
+    result+="<tr><td>Tiempo de duracion de un Proceso </td><td>"+personsServed+" dias </td></tr>";
+    result+="<tr><td>Promedio de duracion de un Proceso</td><td>"+analyticMeanPersonsOnSystem+"</td></tr>";
+    result+="<tr><td>Promedio de duracion de un Proceso(Simulado)</td><td>"+meanPersonsOnSystem+"</td></tr>";
     // result+="<tr><td>Intervalo de Confianza (Limite Superior)</td><td>"+confidenceIntervalUpperLimit+"</td></tr>";
     // result+="<tr><td>Intervalo de Confianza (Limite Inferior)</td><td>"+confidenceIntervalLowerLimit+"</td></tr>";
     result+="<tr><td>Desviacion Estandar (Personas en el sistema)</td><td>"+personsOnSystemStandardDeviation+"</td></tr>";
@@ -42,7 +42,7 @@ function chart(chartLabels, chartsData, xLabel)
 {
     $('#container').highcharts({
         title: {
-            text: '<b>N\xFAmero promedio de personas en la fila</b>'
+            text: '<b>Tiempo Promedio de duracion de un Proceso Contencioso</b>'
         },
         subtitle: {
             text: ''
@@ -61,7 +61,7 @@ function chart(chartLabels, chartsData, xLabel)
         },
         yAxis: {
             title: {
-                text: '<b>Promedio de personas en la fila</b>'
+                text: '<b>Tiempo Promedio de un Proceso</b>'
             },
             labels: {
                 formatter: function () {

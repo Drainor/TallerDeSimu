@@ -60,7 +60,7 @@
 <script type="text/javascript" src={{asset("js/interface.js")}}></script>
 <script type="text/javascript" src={{asset("js/Random.js")}}></script>
 <script type="text/javascript" src={{asset("js/Queue.js")}}></script>
-<!-- <script type="text/javascript" src={{asset("Highcharts/api/js/highcharts.js")}}></script> -->
+<script type="text/javascript" src={{asset("Highcharts/api/js/highcharts.js")}}></script> 
 
 <script>
       $( function() {        

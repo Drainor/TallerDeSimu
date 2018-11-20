@@ -9,7 +9,7 @@
       </h4>
       <!-- Form -->
       <div>
-        Promedio Promedio de Proceso Demanda (Dias):
+        Promedio de presentacion de Demandas por dia:
       </div>
       <input class="form-control" id="lambda" type="text" value="0.1"/>
       <div>
@@ -33,7 +33,7 @@
           <option value="uniforme">Uniforme</option>-->
       </select>
       <div class="form-group">
-      <div class="btn btn-block btn-primary" id="simulate">
+      <div class="btn btn-block btn-primary" id="simulate"  onclick="simulate()">
         Simular
       </div>
       </div>
