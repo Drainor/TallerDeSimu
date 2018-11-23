@@ -5,7 +5,7 @@ var c  = generarConst(1000,mcdM);
 var a  = generarA(mcdM,m)+1;
 var generadorMixto = function(rango) {
     var nro = generarNumero(a,c,m)*(rango)+1;
-    console.log(nro);
+    //console.log(nro);
     return parseInt(nro);
 }
 
