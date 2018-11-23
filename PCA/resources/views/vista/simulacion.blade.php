@@ -1,4 +1,5 @@
-
+<button id="prueba">prueba</button>
+<button id="pausear">pausear</button>
 <div class="col-sm-5">
 
   <div class="fondo">

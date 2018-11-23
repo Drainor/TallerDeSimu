@@ -1,14 +1,74 @@
-var tiempo = 7000;
+//var tiempo = 7000;
 var aux = 0;
+var procesos = 0;
+var i = 0;
+var intervalo = 0;
+var tiempo = 0;
+var procesoDemanda
+$('#prueba').click(function(){
+    nuevaDemanda();
+})
 var simularProceso = function(procesos){
+    console.log(procesos.length);
+    this.procesos = procesos;
+    simular(i++);
+    intervalo = setInterval(function(){ simular(i++)},3000);
+}
+
+/*var simularProceso = function(procesos){
    reiniciar();
    for (let i = 0; i < procesos.length; i++) {
     realizarMovimiento(procesos[i].proceso,procesos[i].subProceso,procesos[i].recurso);
     aux=aux+1;
    }
+}*/
+function simular(p){
+  if(p < procesos.length){
+    movimiento(p);
+  }else{
+    i= 0;
+    clearInterval(intervalo);
+    reiniciar();
+    nuevaDemanda();
+  }
 }
 
-function realizarMovimiento(mov,subP,recurso){
+function movimiento(p){
+  mov = procesos[p].proceso;
+  switch (mov) {
+    case 1:mover(-45,150,1,p);
+      break;
+    case 2:mover(190,150,2,p);
+      break;
+    case 3:mover(75,230,3,p);
+      break;
+    case 4:mover(-45,390,4,p);
+      break;
+    case 5:mover(190,390,5,p);
+      break;
+    case 6:mover(75,470,6,p);
+      break;
+    case 7:mover(554,0,7,p);
+      break;
+    case 8:mover(775,0,8,p);
+      break;
+    case 9:mover(665,80,9,p);
+      break;
+    case 10:mover(554,230,10,p);
+      break;
+    case 11:mover(775,230,11,p);
+      break;
+    case 12:mover(665,310,12,p);
+      break;
+    case 13:mover(554,460,13,p);
+      break;
+    case 14:mover(665,460,14,p);
+      break;
+    case 0:mover(1200,550,20,p);
+      break;
+  }
+}
+/*function realizarMovimiento(mov,subP,recurso){
     switch (mov) {
       case 1:setTimeout(function(){mover(-45,150,1,subP,recurso);}, tiempo*aux);
         break;
@@ -41,17 +101,27 @@ function realizarMovimiento(mov,subP,recurso){
       case 0:setTimeout(function(){mover(1200,550,20,subP,recurso);}, tiempo*aux);
         break;
     }
-}
+}*/
 
 
-
-function mover(x,y,pros,subP,recurso){
+function mover(x,y,pros,p){
+  var pros = procesos[p].proceso;
+  var subP = procesos[p].subProceso;
+  var recurso = procesos[p].recurso;
   var proceso = $('.dot-'+pros);
   var demandante = $('.cuadrado');
   sobrePoner(proceso,demandante);
-  $('.cuadrado').animate({left:""+ x+"px",top:""+y+"px"},6000);
-  setTimeout(function(){ subProcesos(pros,subP,recurso); }, 7000);
+  $('.cuadrado').animate({left:""+ x+"px",top:""+y+"px"},1000);
+  setTimeout(function(){ subProcesos(pros,subP,recurso); },1000);
 }
+
+/*function mover(x,y,pros,subP,recurso){
+  var proceso = $('.dot-'+pros);
+  var demandante = $('.cuadrado');
+  sobrePoner(proceso,demandante);
+  $('.cuadrado').animate({left:""+ x+"px",top:""+y+"px"},tiempo - 3000);
+  setTimeout(function(){ subProcesos(pros,subP,recurso); },tiempo - 3000);
+}*/
 
 function reiniciar() {
   $('.cuadrado').animate({left:""+ 0+"px",top:""+0+"px"},500);
@@ -109,3 +179,29 @@ function reiniciarRecursos(){
     
   }
 }
+
+$('#pausear').click(function() {
+  pauseado = $(this).prop('value');
+  if(pauseado == 'Reanudar'){
+    $(this).attr('value', 'Pausear');
+    $(this).html('Pausear');
+    simular(i++)
+    intervalo = setInterval(function(){simular(i++)},3000);  
+  }else{
+    clearInterval(intervalo);
+    $(this).attr('value', 'Reanudar');
+    $(this).html('Reanudar');
+  }
+})
+
+
+
+
+
+
+
+
+
+
+
+

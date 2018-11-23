@@ -1,7 +1,15 @@
+var tiempo = 0;
+var espera = 0;
+var corridas = 1;
 var procesoDemanda;//ARREGLO DE PROCESOS QUE MADARE AL COMTROL_SIMULACION
-$('#simularAnimacion').click(function() {
-   
+var nuevaDemanda = function () {
     demanda(true);
+};
+
+$('#simularAnimacion').click(function() {
+
+        demanda(true);
+    
 
   
 })
@@ -11,14 +19,16 @@ function demanda(simular){
     var notificar = true;//inicializo la notifivicacion
     var tiempo = Array();
     var nroAleatoreo = generadorMixto(2);
-    var dias = generadorMixto(10);
-    agregarProceso(1,'Se presenta la demanda deacuerdo a lo q señala el Art.110 CPC');
+    var dias = generadorMixto(2);
+    agregarProceso(1,'Se presenta la demanda de acuerdo a lo que señala el Art.110 CPC',"",dias);
     var subP2 = "";
+    dias = generadorMixto(10);
+    subP2 += "Se realiza la revision de la demanda en un tiempo de "+dias+"dias <br>";
     if(nroAleatoreo < 2){
-        tiempo.push({'tiempoDemanda':dias});
-        subP2 += "se acepta La demanda";
-        agregarProceso(2,subP2);
-        agregarProceso(3,'Notificar al Demandado');
+        //tiempo.push({'tiempoDemanda':dias});
+        subP2 += "Se acepta La demanda en dias";
+        agregarProceso(2,subP2,"",dias);
+        agregarProceso(3,'Se Notificar al Demandado',0);
     }else{
         subP2 += "Se rechaza la demanda <br>"
         subP2 += "Se realiza la subsanacion de la demanda, plazo 3 dias<br>";
@@ -28,17 +38,16 @@ function demanda(simular){
             tiempo.push({'tiempoDemanda':dias});
             subP2 += "Se completo la subsanacion en "+subSanacion +" dia(s)<br>";
             subP2 += "Se acepta la Demanda <br>";
-            agregarProceso(2,subP2);
-            agregarProceso(3,'se notifica al Demandado');
+            agregarProceso(2,subP2,"",subSanacion);
+            agregarProceso(3,'Se notifica al Demandado',"",0);
         }else{
             tiempo.push({'tiempoDemanda':dias});
             subP2 += "No se pudo subsanar la demanda ya que el demandande tardo "+subSanacion+" dias<br>";
             subP2 +="Se rechaza la demanda por completo<br>";
             subP2 += "Se da fin al Proceso<br>";
-            agregarProceso(2,subP2);
-            agregarProceso(0,"");//proceso SALIR 
+            agregarProceso(2,subP2,"",subSanacion);
+            agregarProceso(0,"",0);//proceso SALIR 
             finalizarProceso(tiempo,simular);
-            
             notificar = false;//cancelo la notificacion
         }
     }
@@ -49,48 +58,48 @@ function demanda(simular){
 }
 
 function contestacion(tiempo,simular){
-   
+   var dias = 0;
     var diasTotal = 0;
     var contestar = false;
     var subProc = "";
     let i = 1;
-    while(!contestar && i <= 3){
+    while(!contestar && i < 3){
         agregarProceso(4,"El demandado recibe la notificacion<br>El demandado tiene un plazo de 15 dias para contestar la notificacion");
         contDemanda = generadorMixto(10);
-        if(contestar <= 5){
+        if(contDemanda <= 5){
             dias = generadorMixto(15);
             diasTotal +=dias;
             contestar = true;
-            subProc += "El demandado contesta la demanda pasado "+ dias+"dia(s) de haber resivido la notificacion<br>";
+            subProc += "El demandado contesta la demanda pasado "+ dias+"dia(s) de haber recibido la notificacion<br>";
             tiempo.push({'tiempoContestacion':diasTotal})
-            tiempoContestacion = generadorMixto(2);
-            if(tiempoContestacion == 1){
+            tipoContestacion = generadorMixto(2);
+            if(tipoContestacion == 1){
                 subProc += "El demandado se presenta y contesta mediante el documento de contestacion<br>";
-                agregarProceso(5,subProc);
-                agregarProceso(6,"el demandado acepta todos los cargos presentes en la demanda<br> Se da fin al proceso",1);
-                agregarProceso(0,"");
+                agregarProceso(5,subProc,"",dias);
+                agregarProceso(6,"el demandado acepta todos los cargos presentes en la demanda<br> Se da fin al proceso",1,0);
+                agregarProceso(0,"",0);
                 finalizarProceso(tiempo,simular);
             }else{
                 subProc += "El demandado se presenta, comparece pero no hace el documento de contestacion<br>";
-                agregarProceso(5,subProc);
-                agregarProceso(6,"El demandado no esta deacuerdo de lo que se lo demanda<br>El demandado realiza una contra demanda contra el demandante<br>",1);
+                agregarProceso(5,subProc,dias);
+                agregarProceso(6,"El demandado no esta de acuerdo de lo que se lo demanda<br>El demandado realiza una contra demanda contra el demandante<br>",1,0);
                 tramites(tiempo,simular);
             }
            
             
         }else{
             diasTotal += 15;
-            agregarProceso(5,"pasado los 15 dias el demandado no contesta la demanda");
-            agregarProceso(3,"Se notifica de nuevo  al Demandado, notificacion nro "+(i+1));
+            agregarProceso(5,"pasado los 15 dias el demandado no contesta la demanda","",15);
+            agregarProceso(3,"Se notifica de nuevo  al Demandado, notificacion nro "+(i+1),0);
         }
         i++;
     }
     if(!contestar){
         var proc = "demandado No contesto la demanda de haber sido notificado en tres ocaciones<br>";
-        proc += "El demandado es conciderado como rebelde y no es tomado encuenta<br>";
+        proc += "El demandado es considerado como rebelde y no es tomado encuenta<br>";
         proc += "Se procede a dictar la sentencia<br>";
         tiempo.push({'tiempoContestacion':diasTotal});
-        agregarProceso(6,proc);
+        agregarProceso(6,proc,"",0);
         sentencia(tiempo,simular);
 
     }
@@ -102,29 +111,29 @@ function tramites(tiempo,simular){
     var diasTotal = 0;
     var subProc = "";
     var recurso = generadorMixto(3)+1;
-    dias = generadorMixto(10);
+    var dias = generadorMixto(10);
     diasTotal +=dias;
     subProc = "Presentacion de pruebas y requisitos en un plazo maximo de 10 dias<br>";
     subProc += "Se realizo la presentacion en "+dias+"dias<br>";
-    agregarProceso(7,subProc);
+    agregarProceso(7,subProc,"",dias);
     cumplenR = generadorMixto(2);
     if(cumplenR < 1){
         subProc += "Se aceptan los requisitos";
-        agregarProceso(9,subProc,recurso);
+        agregarProceso(9,subProc,recurso,0);
         dias = generadorMixto(8);
         diasTotal += dias;
-        subProc = "Se realiza la Aprobacion y revicion de los tramites en un plazo maximo de 8 dias<br>";
-        subProc += "Se conclulle con la aprobacion y revicion en "+dias+"dias<br>";
+        subProc = "Se realiza la Aprobacion y revision de los tramites en un plazo maximo de 8 dias<br>";
+        subProc += "Se concluye con la aprobacion y revision en "+dias+"dias<br>";
         aprobado = generadorMixto(2);
         if (aprobado < 1) {
             subProc += "Se aprobaron todos los tramites<br>";
-            agregarProceso(8,subProc);
+            agregarProceso(8,subProc,"",dias);
             tiempo.push({'tiempoTramite':diasTotal});
             audiencia(tiempo,simular);
         }else{
             subProc += "Se rechazan los tramites<br>";
             subProc += "El Juez dicta Auto o reconcidera revicion";
-            agregarProceso(8,subProc);
+            agregarProceso(8,subProc,"",dias);
             tiempo.push({'tiempoTramite':diasTotal});
             audiencia(tiempo,simular);
             //faltaa no entiendo
@@ -134,10 +143,6 @@ function tramites(tiempo,simular){
         subProc += "El Juez dicta Auto para sentencia";
         agregarProceso(8,subProc);
         sentencia(tiempo,simular);
-    }
-    agregarProceso(7,"")
-    if(cumple < 2){
-        
     }
 }
 
@@ -195,7 +200,7 @@ function audiencia(tiempo,simular){
         }else{
             subProcesos(11,subProc);
             subProc = "Las partes se pronuncian y exponen los alegatos<br>"; 
-            subProc += "Una ves solucionado los alegatos se procede a dictar centencia<br>"; 
+            subProc += "Una vez solucionado los alegatos se procede a dictar sentencia<br>"; 
             subProcesos(12,subProc);
             sentencia(tiempo,simular);
         }
@@ -236,11 +241,14 @@ function sentencia(tiempo,simular){
 }
 
 function finalizarProceso(tiempo,simular){
+    
     if(simular){
-        simularProceso(procesoDemanda);
+         simularProceso(procesoDemanda);
     }
+    
+    
 }
-function agregarProceso(proc,subProc,recurso){
-    procesoDemanda.push({'proceso':proc,'subProceso':subProc,'recurso':recurso});
+function agregarProceso(proc,subProc,recurso,tiempo){
+    procesoDemanda.push({'proceso':proc,'subProceso':subProc,'recurso':recurso,'tiempo':tiempo});
 }
 

@@ -11,7 +11,7 @@
       <div>
         Promedio de presentacion de Demandas por dia:
       </div>
-      <input class="form-control" id="lambda" type="text" value="0.1"/>
+      <input class="form-control" id="lambda" type="text" value="2"/>
       <div>
         Tiempo Promedio de Proceso Tramite (dias):
       </div>
@@ -19,7 +19,7 @@
       <div>
         Tiempo Promedio de Proceso Audiencia:
       </div>
-      <input class="form-control" id="time" type="text" value="480"/>
+      <input class="form-control" id="time" type="text" value="1"/>
       <div>
         Numero de corridas:
       </div>
@@ -28,7 +28,7 @@
       Distribucion del tiempo entre llegadas:
       </div>
       <select id="distrib" onchange="onDistributionValueChanged()">
-          <option value="exponencial">Poisson</option>
+          <option value="exponencial">Binomial</option>
           <!--<option value="deterministico">Determinístico</option>
           <option value="uniforme">Uniforme</option>-->
       </select>
