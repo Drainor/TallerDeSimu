@@ -3,13 +3,9 @@ var aux = 0;
 var procesos = 0;
 var i = 0;
 var intervalo = 0;
-var tiempo = 0;
-var procesoDemanda
-$('#prueba').click(function(){
-    nuevaDemanda();
-})
+var nroCorridas=1;
 var simularProceso = function(procesos){
-    console.log(procesos.length);
+    reiniciar();
     this.procesos = procesos;
     simular(i++);
     intervalo = setInterval(function(){ simular(i++)},3000);
@@ -23,13 +19,18 @@ var simularProceso = function(procesos){
    }
 }*/
 function simular(p){
+  var totalCorridas = $('.nroCorridas').val();
   if(p < procesos.length){
     movimiento(p);
-  }else{
+  }else  if(nroCorridas < totalCorridas){
     i= 0;
+    nroCorridas = nroCorridas+1;
     clearInterval(intervalo);
-    reiniciar();
     nuevaDemanda();
+  }else{
+    i=0;
+    nroCorridas= 1;
+    clearInterval(intervalo);
   }
 }
 
@@ -181,18 +182,25 @@ function reiniciarRecursos(){
 }
 
 $('#pausear').click(function() {
-  pauseado = $(this).prop('value');
+  
+  pauseado = $(this).prop('id');
   if(pauseado == 'Reanudar'){
-    $(this).attr('value', 'Pausear');
+    $(this).attr('id', 'Pausear');
     $(this).html('Pausear');
-    simular(i++)
-    intervalo = setInterval(function(){simular(i++)},3000);  
+    if(procesos != 0){
+      simular(i++)
+      intervalo = setInterval(function(){simular(i++)},3000);
+    }
   }else{
-    clearInterval(intervalo);
-    $(this).attr('value', 'Reanudar');
+    if(procesos != 0){
+      clearInterval(intervalo);
+    }
+    
+    $(this).attr('id', 'Reanudar');
     $(this).html('Reanudar');
   }
 })
+
 
 
 
