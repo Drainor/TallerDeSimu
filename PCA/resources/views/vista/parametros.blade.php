@@ -23,7 +23,7 @@
       <div>
         Numero de corridas:
       </div>
-      <input class="form-control" id="rounds" type="text" value="10"/>
+      <input class="form-control nroCorridas" id="rounds" type="text" value="10"/>
       <div>
       Distribucion del tiempo entre llegadas:
       </div>
@@ -40,6 +40,9 @@
       <a class="btn btn-block btn-success" id="simularAnimacion">
           Simular Animacion
       </a>
+      <a class="btn btn-block btn-danger" id="pausear" >
+        Pausear
+    </a>
       <!-- <div class="btn btn-block btn-info" data-toggle="modal" href="#myModal" role="button">
         About
       </div> -->
