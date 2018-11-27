@@ -4,11 +4,14 @@ var procesos = 0;
 var i = 0;
 var intervalo = 0;
 var nroCorridas=1;
+var tiempoProceso= 0;
+var cuadroTiempo = 0;
+var cuadro = "";
 var simularProceso = function(procesos){
     reiniciar();
     this.procesos = procesos;
     simular(i++);
-    intervalo = setInterval(function(){ simular(i++)},3000);
+    intervalo = setInterval(function(){ simular(i++)},5000);
 }
 
 /*var simularProceso = function(procesos){
@@ -25,6 +28,8 @@ function simular(p){
   }else  if(nroCorridas < totalCorridas){
     i= 0;
     nroCorridas = nroCorridas+1;
+    tiempoProceso = 0;
+    cuadro = "";
     clearInterval(intervalo);
     nuevaDemanda();
   }else{
@@ -109,11 +114,12 @@ function mover(x,y,pros,p){
   var pros = procesos[p].proceso;
   var subP = procesos[p].subProceso;
   var recurso = procesos[p].recurso;
+  var tiempoP = procesos[p].tiempo;
   var proceso = $('.dot-'+pros);
   var demandante = $('.cuadrado');
   sobrePoner(proceso,demandante);
-  $('.cuadrado').animate({left:""+ x+"px",top:""+y+"px"},1000);
-  setTimeout(function(){ subProcesos(pros,subP,recurso); },1000);
+  $('.cuadrado').animate({left:""+ x+"px",top:""+y+"px"},3000);
+  setTimeout(function(){ subProcesos(pros,subP,recurso,tiempoP); },3000);
 }
 
 /*function mover(x,y,pros,subP,recurso){
@@ -148,12 +154,14 @@ function sobrePoner(div,dem){
 }
 
 
-function subProcesos(pros,subP,recurso){
+function subProcesos(pros,subP,recurso,tiempoP){
     reiniciarRecursos();
     //$("#proceso"+pros).removeClass("smallipop-initialized");
     $("#proceso"+pros).smallipop({theme: 'black'}, contenido(subP));
     $("#proceso"+pros).smallipop('update', contenido(subP));
-
+    if(subP != ""){
+       agregarLineaDeTiempo(subP,tiempoP);
+    }
     if(recurso){
       $("#recurso"+recurso).css('background', 'red');
     }
@@ -174,6 +182,25 @@ function contenido(subP){
               "</div>"
 }
 
+function agregarLineaDeTiempo(subP,tiempoP){
+    $('#nroProceso').html("Proceso Nro "+nroCorridas);
+    
+    tiempoProceso += tiempoP;
+    cuadro += 
+   
+      "<div class='timeline__box'>"+
+        "<div class='timeline__date'>"+
+          "<span class='timeline__day'>"+tiempoProceso+"</span>"+
+          "<span class='timeline__month'>Dias</span>"+
+        "</div>"+
+        "<div class='timeline__post'>"+
+          "<div class='timeline__content'>"+
+            "<p>"+subP+"</p>"+
+          "</div>"+
+        "</div>"+
+    "</div>";
+    $('#lineaTiempo').html(cuadro);
+}
 function reiniciarRecursos(){
   for (let i = 1; i <= 4; i++) {
     $("#recurso"+i).css('background', '#bea');
