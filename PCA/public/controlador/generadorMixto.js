@@ -1,4 +1,4 @@
-var xn=2;
+var xn=10;
 var m = 1500;
 var mcdM = mcd(m);
 var c  = generarConst(1000,mcdM);

@@ -1,320 +1,252 @@
-<section id=timeline>
-        <h1>Linea de Tiempo</h1>
-        <div class="demo-card-wrapper">
-            <div class="demo-card demo-card--step1">
-                <div class="head">
-                    <div class="number-box">
-                        <span>01</span>
-                    </div>
-                    <h2><span class="small">Subtitle</span> Technology</h2>
-                </div>
-                <div class="body">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.</p>
-                </div>
-            </div>
-    
-            <div class="demo-card demo-card--step2">
-                <div class="head">
-                    <div class="number-box">
-                        <span>02</span>
-                    </div>
-                    <h2><span class="small">Subtitle</span> Confidence</h2>
-                </div>
-                <div class="body">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.</p>
-                </div>
-            </div>
-    
-            <div class="demo-card demo-card--step1">
-                <div class="head">
-                    <div class="number-box">
-                        <span>03</span>
-                    </div>
-                    <h2><span class="small">Subtitle</span> Adaptation</h2>
-                </div>
-                <div class="body">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.</p>
-                </div>
-            </div>
-    
-            <div class="demo-card demo-card--step2">
-                <div class="head">
-                    <div class="number-box">
-                        <span>04</span>
-                    </div>
-                    <h2><span class="small">Subtitle</span> Consistency</h2>
-                </div>
-                <div class="body">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.</p>
+<html lang="en" class=""><head><script src="//static.codepen.io/assets/editor/live/console_runner-ce3034e6bde3912cc25f83cccb7caa2b0f976196f2f2d52303a462c826d54a73.js"></script><script src="//static.codepen.io/assets/editor/live/css_reload-2a5c7ad0fe826f66e054c6020c99c1e1c63210256b6ba07eb41d7a4cb0d0adab.js"></script><meta charset="UTF-8"><meta name="robots" content="noindex"><link rel="shortcut icon" type="image/x-icon" href="//static.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico"><link rel="mask-icon" type="" href="//static.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111"><link rel="canonical" href="https://codepen.io/melnik909/pen/qPjwvq">
 
-                </div>
-            </div>
-    
-            <div class="demo-card demo-card--step5">
-                <div class="head">
-                    <div class="number-box">
-                        <span>05</span>
-                    </div>
-                    <h2><span class="small">Subtitle</span> Conversion</h2>
-                </div>
-                <div class="body">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.</p>
-                </div>
-            </div>
-        
-        </div>
-    </section>
 
-    <style>
-        /* Media Queries */
-/* Card sizing */
-/* Colors */
-/* Calculations */
-/* Placeholders */
-@media (min-width: 1000px) {
-  #timeline .demo-card:nth-child(odd) .head::after, #timeline .demo-card:nth-child(even) .head::after {
-    position: absolute;
-    content: "";
-    width: 0;
-    height: 0;
-    border-top: 15px solid transparent;
-    border-bottom: 15px solid transparent;
+  <style class="cp-pen-styles">.timeline{
+    --uiTimelineMainColor: var(--timelineMainColor, #222);
+    --uiTimelineSecondaryColor: var(--timelineSecondaryColor, #fff);
+  
+    position: relative;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
-
-  #timeline .demo-card:nth-child(odd) .head::before, #timeline .demo-card:nth-child(even) .head::before {
-    position: absolute;
+  
+  .timeline:before{
     content: "";
-    width: 9px;
-    height: 9px;
-    background-color: #bdbdbd;
-    border-radius: 9px;
-    box-shadow: 0px 0px 2px 8px #f7f7f7;
+    width: 4px;
+    height: 100%;
+    background-color: var(--uiTimelineMainColor);
+  
+    position: absolute;
+    top: 0;
   }
-}
-/* Some Cool Stuff */
-.demo-card:nth-child(1) {
-  order: 1;
-}
-
-.demo-card:nth-child(2) {
-  order: 4;
-}
-
-.demo-card:nth-child(3) {
-  order: 2;
-}
-
-.demo-card:nth-child(4) {
-  order: 5;
-}
-
-.demo-card:nth-child(5) {
-  order: 3;
-}
-
-.demo-card:nth-child(6) {
-  order: 6;
-}
-
-/* Border Box */
-* {
-  box-sizing: border-box;
-}
-
-/* Fonts */
-body {
-  font-family: Roboto;
-}
-
-#timeline {
-  padding: 100px 0;
-  background: #f7f7f7;
-  border-top: 1px solid rgba(191, 191, 191, 0.4);
-  border-bottom: 1px solid rgba(191, 191, 191, 0.4);
-}
-#timeline h1 {
-  text-align: center;
-  font-size: 3rem;
-  font-weight: 200;
-  margin-bottom: 20px;
-}
-#timeline p.leader {
-  text-align: center;
-  max-width: 90%;
-  margin: auto;
-  margin-bottom: 45px;
-}
-#timeline .demo-card-wrapper {
-  position: relative;
-  margin: auto;
-}
-@media (min-width: 1000px) {
-  #timeline .demo-card-wrapper {
+  
+  .timeline__group{
+    position: relative;
+  }
+  
+  .timeline__group:not(:first-of-type){
+    margin-top: 4rem;
+  }
+  
+  .timeline__year{
+    padding: .5rem 1.5rem;
+    color: var(--uiTimelineSecondaryColor);
+    background-color: var(--uiTimelineMainColor);
+  
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  .timeline__box{
+    position: relative;
+  }
+  
+  .timeline__box:not(:last-of-type){
+    margin-bottom: 30px;
+  }
+  
+  .timeline__box:before{
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: var(--uiTimelineMainColor);
+  
+    position: absolute;
+    left: 0;
+    z-index: -1;
+  }
+  
+  .timeline__date{
+    min-width: 65px;
+    position: absolute;
+    left: 0;
+  
+    box-sizing: border-box;
+    padding: .5rem 1.5rem;
+    text-align: center;
+  
+    background-color: var(--uiTimelineMainColor);
+    color: var(--uiTimelineSecondaryColor);
+  }
+  
+  .timeline__day{
+    font-size: 2rem;
+    font-weight: 700;
+    display: block;
+  }
+  
+  .timeline__month{
+    display: block;
+    font-size: .8em;
+    text-transform: uppercase;
+  }
+  
+  .timeline__post{
+    padding: 1.5rem 2rem;
+    border-radius: 2px;
+    border-left: 3px solid var(--uiTimelineMainColor);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24);
+    background-color: var(--uiTimelineSecondaryColor);
+  }
+  
+  @media screen and (min-width: 641px){
+  
+    .timeline:before{
+      left: 30px;
+    }
+  
+    .timeline__group{
+      padding-top: 55px;
+    }
+  
+    .timeline__box{
+      padding-left: 80px;
+    }
+  
+    .timeline__box:before{
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);  
+    }  
+  
+    .timeline__date{
+      top: 50%;
+      margin-top: -27px;
+    }
+  }
+  
+  @media screen and (max-width: 640px){
+  
+    .timeline:before{
+      left: 0;
+    }
+  
+    .timeline__group{
+      padding-top: 40px;
+    }
+  
+    .timeline__box{
+      padding-left: 20px;
+      padding-top: 70px;
+    }
+  
+    .timeline__box:before{
+      top: 90px;
+    }    
+  
+    .timeline__date{
+      top: 0;
+    }
+  }
+  
+  .timeline{
+    --timelineMainColor: #4557bb;
+    font-size: 16px;
+  }
+  
+  @media screen and (min-width: 768px){
+  
+    html{
+      font-size: 62.5%;
+    }
+  }
+  
+  @media screen and (max-width: 767px){
+  
+    html{
+      font-size: 55%;
+    }
+  }
+  
+  /*
+  * demo page
+  */
+  
+  body{
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans, Ubuntu, Fira Sans, Helvetica Neue, sans-serif;
+    font-size: 1.6rem;
+    color: #222;
+  
+    background-color: #f0f0f0;
+    margin: 0;
+    -webkit-overflow-scrolling: touch;   
+    overflow-y: scroll;
+  }
+  
+  p{
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+  }
+  
+  p:last-child{
+    margin-bottom: 0;
+  }
+  
+  .page{
+    min-height: 100vh;
     display: flex;
-    flex-flow: column wrap;
-    width: 1170px;
-    height: 1650px;
-    margin: 0 auto;
+    flex-direction: column;
+    justify-content: space-around;
   }
-}
-#timeline .demo-card-wrapper::after {
-  z-index: 1;
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  border-left: 1px solid rgba(191, 191, 191, 0.4);
-}
-@media (min-width: 1000px) {
-  #timeline .demo-card-wrapper::after {
-    border-left: 1px solid #bdbdbd;
+  
+  .page__demo{
+    flex-grow: 1;
   }
-}
-#timeline .demo-card {
-  position: relative;
-  display: block;
-  margin: 10px auto 80px;
-  max-width: 94%;
-  z-index: 2;
-}
-
-  #timeline .demo-card {
-    max-width: 60%;
-    box-shadow: 0px 1px 22px 4px rgba(0, 0, 0, 0.07);
+  
+  .main-container{
+    max-width: 960px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  
+    margin-left: auto;
+    margin-right: auto;
   }
-}
-@media (min-width: 720px) {
-  #timeline .demo-card {
-    max-width: 40%;
+  
+  .page__container{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    max-width: 800px;
   }
-}
-@media (min-width: 1000px) {
-  #timeline .demo-card {
-    max-width: 450px;
-    height: 200px;
-    margin: 90px;
-    margin-top: 45px;
-    margin-bottom: 45px;
+  
+  .footer{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;  
+    font-size: 1.4rem;
   }
-  #timeline .demo-card:nth-child(odd) {
-    margin-right: 45px;
+  
+  .footer__link{
+    text-decoration: none;
+    color: inherit;
   }
-  #timeline .demo-card:nth-child(odd) .head::after {
-    border-left-width: 15px;
-    border-left-style: solid;
-    left: 100%;
+  
+  @media screen and (min-width: 361px){
+  
+    .footer__container{
+      display: flex;
+      justify-content: space-between;
+    }
   }
-  #timeline .demo-card:nth-child(odd) .head::before {
-    left: 491.5px;
-  }
-  #timeline .demo-card:nth-child(even) {
-    margin-left: 45px;
-  }
-  #timeline .demo-card:nth-child(even) .head::after {
-    border-right-width: 15px;
-    border-right-style: solid;
-    right: 100%;
-  }
-  #timeline .demo-card:nth-child(even) .head::before {
-    right: 489.5px;
-  }
-  #timeline .demo-card:nth-child(2) {
- 
-    margin-top: 180px;
-  }
-}
-#timeline .demo-card .head {
-  position: relative;
-  display: flex;
-  align-items: center;
-  color: #fff;
-  font-weight: 400;
-}
-#timeline .demo-card .head .number-box {
-  display: inline;
-  float: left;
-  margin: 15px;
-  padding: 10px;
-  font-size: 35px;
-  line-height: 35px;
-  font-weight: 600;
-  background: rgba(0, 0, 0, 0.17);
-}
-#timeline .demo-card .head h2 {
-  text-transform: uppercase;
-  font-size: 1.3rem;
-  font-weight: inherit;
-  letter-spacing: 2px;
-  margin: 0;
-  padding-bottom: 6px;
-  line-height: 1rem;
-}
-@media (min-width: 480px) {
-  #timeline .demo-card .head h2 {
-    font-size: 165%;
-    line-height: 1.2rem;
-  }
-}
-#timeline .demo-card .head h2 span {
-  display: block;
-  font-size: 0.6rem;
-  margin: 0;
-}
-@media (min-width: 480px) {
-  #timeline .demo-card .head h2 span {
-    font-size: 0.8rem;
-  }
-}
-#timeline .demo-card .body {
-  background: #fff;
-  border: 1px solid rgba(191, 191, 191, 0.4);
-  border-top: 0;
-  padding: 15px;
-}
-@media (min-width: 1000px) {
-  #timeline .demo-card .body {
-    min-width: 315px;
-  }
-}
-#timeline .demo-card .body p {
-  font-size: 14px;
-  line-height: 18px;
-  margin-bottom: 15px;
-}
-#timeline .demo-card .body img {
-  display: block;
-  width: 100%;
-}
-#timeline .demo-card--step1 {
-  background-color: #46b8e9;
-}
-#timeline .demo-card--step1 .head::after {
-  border-color: #46b8e9;
-}
-#timeline .demo-card--step2 {
-  background-color: #3ee9d1;
-}
-#timeline .demo-card--step2  {
-  border-color: #3ee9d1;
-}
-#timeline .demo-card--step3 {
-  background-color: #ce43eb;
-}
-#timeline .demo-card--step3 .head::after {
-  border-color: #ce43eb;
-}
-#timeline .demo-card--step4 {
-  background-color: #4d92eb;
-}
-#timeline .demo-card--step4 .head::after {
-  border-color: #4d92eb;
-}
-#timeline .demo-card--step5 {
-  background-color: #46b8e9;
-}
-#timeline .demo-card--step5 .head::after {
-  border-color: #46b8e9;
-}
-
-    </style>
+  
+  @media screen and (max-width: 360px){
+  
+    .melnik909{
+      display: none;
+    } 
+  }</style></head><body>
+  <div class="page">
+    <div class="page__demo">
+      <div class="main-container page__container">
+        <div class="timeline" >
+            <div class="timeline__group" id="lineaTiempo">
+                
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  </body></html>

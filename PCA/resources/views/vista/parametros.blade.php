@@ -9,7 +9,7 @@
       </h4>
       <!-- Form -->
       <div>
-        Promedio de presentacion de Demandas por dia:
+        Porcentaje de presentaciones de Demandas por dia:
       </div>
       <input class="form-control" id="lambda" type="text" value="2"/>
       <div>
