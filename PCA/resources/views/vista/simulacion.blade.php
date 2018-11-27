@@ -50,7 +50,7 @@
     </tr>
     <tr>
       <td>
-        <div class="fat-finger color1 " id="proceso4">Demandado recibe notificacion</div>
+        <div class="fat-finger color1 " id="proceso4">Demandado recibe Notificacion</div>
       </td>
       <td></td>
       <td>
@@ -142,7 +142,7 @@
         <th colspan="3">Recursos Disponibles </th>
       </tr>
       <tr>
-          <td><div class="fat-finger color4" id="recurso1">Allanamiento y reconvencion
+          <td><div class="fat-finger color4" id="recurso1">Allanamiento y Reconvencion
               <div class="dot-12"></div>
           </div>
           </td>

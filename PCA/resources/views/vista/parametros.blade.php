@@ -17,7 +17,7 @@
       </div>
       <input class="form-control" id="mu" type="text" value="30"/>
       <div>
-        Tiempo Promedio de Proceso Audiencia:
+        Tiempo Promedio de Proceso Audiencia (dias):
       </div>
       <input class="form-control" id="time" type="text" value="1"/>
       <div>
@@ -25,7 +25,7 @@
       </div>
       <input class="form-control nroCorridas" id="rounds" type="text" value="10"/>
       <div>
-      Distribucion del tiempo entre llegadas:
+        Distribucion del tiempo entre llegadas:
       </div>
       <select id="distrib" onchange="onDistributionValueChanged()">
           <option value="exponencial">Binomial</option>
@@ -34,20 +34,20 @@
       </select>
       <div class="form-group">
       <div class="btn btn-block btn-primary" id="simulate"  onclick="simulate()">
-        Simular
+        SIMULAR
       </div>
       </div>
       <a class="btn btn-block btn-success" id="simularAnimacion">
-          Simular Animacion
+          SIMULAR ANIMACION
       </a>
       <a class="btn btn-block btn-danger" id="pausear" >
-        Pausear
+        PAUSAR
     </a>
       <!-- <div class="btn btn-block btn-info" data-toggle="modal" href="#myModal" role="button">
         About
       </div> -->
       <div class="btn btn-block" id="reset">
-        Reset
+        REINICIAR
       </div>
     </div>
     <!-- pad nav-->
