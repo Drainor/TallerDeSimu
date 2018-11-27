@@ -23,7 +23,7 @@
     </td>
     <td class="titulo hidden-xsn" rowspan="2" background="images/background1.png" align="center" valign="middle" width="312">
         <h1 style="color:white">
-          Sistema de Proceso Contencioso Administrativo
+          Sistema de Simulacion para Procesos Contenciosos Administrativos
         </h1>
     </td>
     <td background="images/background1.png" height="37" valign="top" align="center" class="titulo hidden-xs" width="300"></td>
